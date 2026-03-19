@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - KanjiCraft</title>
+    <style>
+        :root { --primary: #4F46E5; --bg: #0D1642; --bg-card: #1A1F4E; --text: #F8FAFC; --text-secondary: #CBD5E1; --gold: #F59E0B; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; padding: 2rem 1rem; }
+        .container { max-width: 720px; margin: 0 auto; }
+        .back { color: var(--primary); text-decoration: none; font-size: 0.9rem; display: inline-block; margin-bottom: 1.5rem; }
+        .back:hover { text-decoration: underline; }
+        h1 { font-size: 2rem; font-weight: 800; margin-bottom: 0.25rem; }
+        .updated { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 2rem; }
+        .section { background: var(--bg-card); border-radius: 12px; padding: 1.5rem; margin-bottom: 1rem; }
+        .section h2 { font-size: 1.1rem; color: var(--gold); margin-bottom: 0.75rem; }
+        .section p, .section li { color: var(--text-secondary); line-height: 1.7; font-size: 0.92rem; }
+        .section ul { padding-left: 1.25rem; margin-top: 0.5rem; }
+        .section li { margin-bottom: 0.3rem; }
+        .highlight { background: rgba(245, 158, 11, 0.1); border-left: 3px solid var(--gold); padding: 1rem 1.25rem; border-radius: 0 8px 8px 0; margin: 1rem 0; }
+        .highlight p { color: var(--text) !important; }
+        .footer { text-align: center; margin-top: 2rem; color: var(--text-secondary); font-size: 0.85rem; }
+        .footer a { color: var(--primary); text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index" class="back">&larr; Back to KanjiCraft</a>
+        <h1>Privacy Policy</h1>
+        <p class="updated">Last updated: March 19, 2026</p>
+
+        <div class="section">
+            <p>KanjiCraft ("we", "our", "us") operates the KanjiCraft mobile application ("App"). This Privacy Policy describes how we collect, use, store, and protect your personal information, in compliance with the General Data Protection Regulation (GDPR), the California Consumer Privacy Act (CCPA), and Brazil's Lei Geral de Proteção de Dados (LGPD).</p>
+        </div>
+
+        <div class="section">
+            <h2>1. Data we collect</h2>
+            <p><strong>1.1 Account data (optional)</strong><br>
+            If you create an account, we collect: email address, display name, and profile picture (when provided). When using social login (Google or Apple), we receive the data authorized by the provider.</p>
+            <p style="margin-top: 0.75rem;"><strong>1.2 Learning data</strong><br>
+            We store locally on your device: kanji progress, spaced repetition (SRS) cards, quiz results, writing scores, achievements, XP, and daily study streak.</p>
+            <p style="margin-top: 0.75rem;"><strong>1.3 User preferences</strong><br>
+            Japanese level, study goal, app language, theme, notification, haptic, and sound settings.</p>
+            <p style="margin-top: 0.75rem;"><strong>1.4 Technical data (automatic)</strong><br>
+            In the event of an app crash, Firebase Crashlytics collects: device type, OS version, error stack traces, and anonymous device identifiers.</p>
+            <p style="margin-top: 0.75rem;"><strong>1.5 Advertising data</strong><br>
+            Google AdMob may collect device advertising identifiers and ad interaction data. On iOS, we request your permission via App Tracking Transparency before any ad tracking.</p>
+        </div>
+
+        <div class="section">
+            <h2>1.6 AI-Assisted Content</h2>
+            <div class="highlight">
+                <p>Kanji meanings, mnemonics, and example vocabulary may have been generated or curated with the assistance of artificial intelligence tools. While we strive for accuracy, language learning content may contain errors. KanjiCraft is a supplementary study tool and should not be considered the sole reference for JLPT preparation or academic purposes. Handwriting recognition uses an on-device machine learning model.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>2. Data we do NOT collect</h2>
+            <ul>
+                <li>Geographic location</li>
+                <li>Contacts or address book</li>
+                <li>Photos, camera, or microphone</li>
+                <li>Health data</li>
+                <li>Browsing history</li>
+                <li>Message content</li>
+            </ul>
+            <p style="margin-top: 0.75rem;">Kanji handwriting recognition (ML) runs entirely on your device. No writing data is sent to external servers.</p>
+        </div>
+
+        <div class="section">
+            <h2>3. How we use your data</h2>
+            <ul>
+                <li>Provide and maintain the kanji learning service</li>
+                <li>Sync your progress across devices (if signed in)</li>
+                <li>Calculate spaced repetition reviews (SM-2 algorithm)</li>
+                <li>Manage achievements, XP, and gamification</li>
+                <li>Send study reminders (local notifications, if enabled)</li>
+                <li>Display ads (free version)</li>
+                <li>Process Pro subscriptions via RevenueCat</li>
+                <li>Diagnose and fix technical issues via Crashlytics</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>4. Legal basis for processing (GDPR/LGPD)</h2>
+            <ul>
+                <li><strong>Contract performance:</strong> providing the service you requested</li>
+                <li><strong>Consent:</strong> for ad tracking (ATT on iOS) and notifications</li>
+                <li><strong>Legitimate interest:</strong> crash diagnostics and service improvement</li>
+            </ul>
+            <p style="margin-top: 0.75rem;">You may withdraw your consent at any time through the app or device settings.</p>
+        </div>
+
+        <div class="section">
+            <h2>5. Storage and security</h2>
+            <p><strong>5.1 Local storage (offline-first)</strong><br>
+            Your learning data is stored primarily on your device using ObjectBox. The app works fully offline.</p>
+            <p style="margin-top: 0.75rem;"><strong>5.2 Cloud storage (optional)</strong><br>
+            If you create an account, your data may be synced with Supabase (hosted PostgreSQL). Row-level security (RLS) policies ensure only you can access your own data.</p>
+            <p style="margin-top: 0.75rem;"><strong>5.3 Encryption</strong><br>
+            All communications use HTTPS/TLS. Auth tokens are stored in Keychain (iOS) and EncryptedSharedPreferences (Android).</p>
+            <p style="margin-top: 0.75rem;"><strong>5.4 Retention</strong><br>
+            We retain your data as long as your account is active. Data from deleted accounts is removed within 30 days.</p>
+        </div>
+
+        <div class="section">
+            <h2>6. Data sharing</h2>
+            <p>We do not sell your personal data. We share data only with:</p>
+            <ul>
+                <li><strong>Supabase</strong> (Supabase Inc.) &mdash; authentication and data sync</li>
+                <li><strong>Google</strong> (Google LLC) &mdash; OAuth login, AdMob advertising</li>
+                <li><strong>Apple</strong> (Apple Inc.) &mdash; Sign in with Apple, SKAdNetwork</li>
+                <li><strong>RevenueCat</strong> (RevenueCat Inc.) &mdash; subscription management</li>
+                <li><strong>Firebase/Google</strong> (Google LLC) &mdash; crash reporting (Crashlytics)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>7. Your rights</h2>
+            <p>Under the GDPR, LGPD, and CCPA, you have the right to:</p>
+            <ul>
+                <li>Access: request a copy of your personal data</li>
+                <li>Rectification: correct inaccurate data</li>
+                <li>Erasure: request deletion ("right to be forgotten")</li>
+                <li>Portability: receive your data in a structured format</li>
+                <li>Withdraw consent at any time</li>
+                <li>Object to processing based on legitimate interest</li>
+                <li>Non-discrimination (CCPA)</li>
+            </ul>
+            <p style="margin-top: 0.75rem;">You can delete your account directly in the app settings or contact us.</p>
+        </div>
+
+        <div class="section">
+            <h2>8. Guest mode</h2>
+            <p>You can use KanjiCraft without an account. No personally identifiable data is collected. All data is stored only on your device.</p>
+        </div>
+
+        <div class="section">
+            <h2>9. Children</h2>
+            <p>KanjiCraft is not directed at children under 13. We do not knowingly collect data from children under 13.</p>
+        </div>
+
+        <div class="section">
+            <h2>10. International data transfers</h2>
+            <p>Your data may be transferred to servers outside your country. We ensure transfers are protected by appropriate safeguards (standard contractual clauses).</p>
+        </div>
+
+        <div class="section">
+            <h2>11. Changes to this policy</h2>
+            <p>We may update this policy from time to time. We will notify you of significant changes through the app.</p>
+        </div>
+
+        <div class="section">
+            <h2>12. Contact</h2>
+            <p>Email: <a href="mailto:admin@becaptainstudio.com" style="color: var(--primary);">admin@becaptainstudio.com</a></p>
+            <p style="margin-top: 0.5rem;">For users in the EU, you may lodge a complaint with your local DPA. For users in Brazil, contact the ANPD.</p>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2026 BeCaptain Studio. All rights reserved.</p>
+            <p style="margin-top: 0.25rem;"><a href="terms">Terms of Service</a> &middot; <a href="index">Home</a></p>
+        </div>
+    </div>
+</body>
+</html>
