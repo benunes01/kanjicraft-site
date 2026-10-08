@@ -4,163 +4,674 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - KanjiCraft</title>
+    <meta name="description" content="How KanjiCraft (BeCaptain Studio) collects, uses and protects your data.">
     <style>
-        :root { --primary: #4F46E5; --bg: #0D1642; --bg-card: #1A1F4E; --text: #F8FAFC; --text-secondary: #CBD5E1; --gold: #F59E0B; }
+        :root { --primary: #4F46E5; --link: #818CF8; --bg: #0D1642; --bg-card: #1A1F4E; --text: #F8FAFC; --text-secondary: #CBD5E1; --gold: #F59E0B; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; padding: 2rem 1rem; }
         .container { max-width: 720px; margin: 0 auto; }
-        .back { color: var(--primary); text-decoration: none; font-size: 0.9rem; display: inline-block; margin-bottom: 1.5rem; }
+        .back { color: var(--link); text-decoration: none; font-size: 0.9rem; display: inline-block; margin-bottom: 1rem; }
         .back:hover { text-decoration: underline; }
+        .langs { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2rem; }
+        .langs a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; padding: 0.35rem 0.85rem; border: 1px solid rgba(203, 213, 225, 0.25); border-radius: 999px; }
+        .langs a:hover { color: var(--text); border-color: var(--link); }
+        .langs a[aria-current="true"] { color: var(--text); border-color: var(--gold); background: rgba(245, 158, 11, 0.1); }
         h1 { font-size: 2rem; font-weight: 800; margin-bottom: 0.25rem; }
         .updated { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 2rem; }
         .section { background: var(--bg-card); border-radius: 12px; padding: 1.5rem; margin-bottom: 1rem; }
         .section h2 { font-size: 1.1rem; color: var(--gold); margin-bottom: 0.75rem; }
         .section p, .section li { color: var(--text-secondary); line-height: 1.7; font-size: 0.92rem; }
-        .section ul { padding-left: 1.25rem; margin-top: 0.5rem; }
+        .section > * + * { margin-top: 0.75rem; }
+        .section ul, .section ol { padding-left: 1.25rem; }
         .section li { margin-bottom: 0.3rem; }
-        .highlight { background: rgba(245, 158, 11, 0.1); border-left: 3px solid var(--gold); padding: 1rem 1.25rem; border-radius: 0 8px 8px 0; margin: 1rem 0; }
+        .section a { color: var(--link); overflow-wrap: anywhere; }
+        .highlight { background: rgba(245, 158, 11, 0.1); border-left: 3px solid var(--gold); padding: 1rem 1.25rem; border-radius: 0 8px 8px 0; }
         .highlight p { color: var(--text) !important; }
-        .footer { text-align: center; margin-top: 2rem; color: var(--text-secondary); font-size: 0.85rem; }
-        .footer a { color: var(--primary); text-decoration: none; }
+        .highlight p + p { margin-top: 0.5rem; }
+        .footer { text-align: center; margin: 2rem 0 3rem; color: var(--text-secondary); font-size: 0.85rem; }
+        .footer a { color: var(--link); text-decoration: none; }
+        .footer a:hover { text-decoration: underline; }
+        [hidden] { display: none !important; }
     </style>
 </head>
 <body>
     <div class="container">
-        <a href="index" class="back">&larr; Back to KanjiCraft</a>
-        <h1>Privacy Policy</h1>
-        <p class="updated">Last updated: March 19, 2026</p>
+        <a href="index" class="back">&larr; KanjiCraft</a>
+        <nav class="langs" aria-label="Language">
+            <a href="#pt" hreflang="pt-BR" lang="pt-BR">Português</a>
+            <a href="#en" hreflang="en" lang="en">English</a>
+            <a href="#es" hreflang="es" lang="es">Español</a>
+            <a href="#id" hreflang="id" lang="id">Bahasa Indonesia</a>
+        </nav>
 
-        <div class="section">
-            <p>KanjiCraft ("we", "our", "us") operates the KanjiCraft mobile application ("App"). This Privacy Policy describes how we collect, use, store, and protect your personal information, in compliance with the General Data Protection Regulation (GDPR), the California Consumer Privacy Act (CCPA), and Brazil's Lei Geral de Proteção de Dados (LGPD).</p>
-        </div>
+        <article id="pt" lang="pt-BR" data-title="Política de Privacidade - KanjiCraft">
+            <h1>Política de Privacidade</h1>
+            <p class="updated">Última atualização: 8 de outubro de 2026</p>
 
-        <div class="section">
-            <h2>1. Data we collect</h2>
-            <p><strong>1.1 Account data (optional)</strong><br>
-            If you create an account, we collect: email address, display name, and profile picture (when provided). When using social login (Google or Apple), we receive the data authorized by the provider.</p>
-            <p style="margin-top: 0.75rem;"><strong>1.2 Learning data</strong><br>
-            We store locally on your device: kanji progress, spaced repetition (SRS) cards, quiz results, writing scores, achievements, XP, and daily study streak.</p>
-            <p style="margin-top: 0.75rem;"><strong>1.3 User preferences</strong><br>
-            Japanese level, study goal, app language, theme, notification, haptic, and sound settings.</p>
-            <p style="margin-top: 0.75rem;"><strong>1.4 Technical data (automatic)</strong><br>
-            In the event of an app crash, Firebase Crashlytics collects: device type, OS version, error stack traces, and anonymous device identifiers.</p>
-            <p style="margin-top: 0.75rem;"><strong>1.5 Advertising data</strong><br>
-            Google AdMob may collect device advertising identifiers and ad interaction data. On iOS, we request your permission via App Tracking Transparency before any ad tracking.</p>
-        </div>
-
-        <div class="section">
-            <h2>1.6 AI-Assisted Content</h2>
-            <div class="highlight">
-                <p>Kanji meanings, mnemonics, and example vocabulary may have been generated or curated with the assistance of artificial intelligence tools. While we strive for accuracy, language learning content may contain errors. KanjiCraft is a supplementary study tool and should not be considered the sole reference for JLPT preparation or academic purposes. Handwriting recognition uses an on-device machine learning model.</p>
+            <div class="section">
+                <p>O KanjiCraft é feito pelo BeCaptain Studio (“nós”). Somos os responsáveis (controladores) pelos dados pessoais descritos aqui. Esta política explica, em linguagem simples, o que o app coleta, para quê, quem nos ajuda e como você mantém o controle.</p>
+                <p>Em resumo:</p>
+                <ul>
+                    <li>Você pode estudar sem conta. Assim, seus dados de estudo ficam só no seu aparelho.</li>
+                    <li>A conta é opcional e serve para guardar e sincronizar seu progresso.</li>
+                    <li>Sua escrita à mão nunca sai do seu aparelho.</li>
+                    <li>Não vendemos seus dados pessoais.</li>
+                    <li>Você pode excluir sua conta no app a qualquer momento.</li>
+                </ul>
             </div>
-        </div>
 
-        <div class="section">
-            <h2>2. Data we do NOT collect</h2>
-            <ul>
-                <li>Geographic location</li>
-                <li>Contacts or address book</li>
-                <li>Photos, camera, or microphone</li>
-                <li>Health data</li>
-                <li>Browsing history</li>
-                <li>Message content</li>
-            </ul>
-            <p style="margin-top: 0.75rem;">Kanji handwriting recognition (ML) runs entirely on your device. No writing data is sent to external servers.</p>
-        </div>
+            <div class="section">
+                <h2>1. Usando o KanjiCraft sem conta</h2>
+                <p>Você pode usar o KanjiCraft como visitante. Seus dados de estudo (progresso nos kanji, agenda de revisões, dias de estudo, XP, conquistas e preferências) ficam salvos apenas no seu aparelho. Nós não os recebemos e, por isso, não conseguimos recuperá-los se você perder o aparelho ou apagar o app.</p>
+                <p>Os serviços descritos nas seções 3 a 5 (compras, anúncios, estatísticas de uso e relatórios de falhas) funcionam da mesma forma com ou sem conta.</p>
+            </div>
 
-        <div class="section">
-            <h2>3. How we use your data</h2>
-            <ul>
-                <li>Provide and maintain the kanji learning service</li>
-                <li>Sync your progress across devices (if signed in)</li>
-                <li>Calculate spaced repetition reviews (SM-2 algorithm)</li>
-                <li>Manage achievements, XP, and gamification</li>
-                <li>Send study reminders (local notifications, if enabled)</li>
-                <li>Display ads (free version)</li>
-                <li>Process Pro subscriptions via RevenueCat</li>
-                <li>Diagnose and fix technical issues via Crashlytics</li>
-            </ul>
-        </div>
+            <div class="section">
+                <h2>2. Se você criar uma conta</h2>
+                <p>A conta é opcional. Você pode entrar com e-mail e senha, com o Google ou com a Apple (no iPhone e no iPad).</p>
+                <p>Guardamos:</p>
+                <ul>
+                    <li>seu e-mail e seu nome de exibição;</li>
+                    <li>o link da sua foto de perfil, se o serviço de login fornecer um;</li>
+                    <li>seu progresso de estudo: progresso nos kanji e agenda de revisões, dias de estudo, XP, conquistas e preferências do app (como idioma, kanji novos por dia e horário do lembrete).</li>
+                </ul>
+                <p>Esses dados ficam no nosso servidor, hospedado na Supabase (provedora de infraestrutura em nuvem), para que seu progresso tenha backup e sincronize entre seus aparelhos.</p>
+                <p>Quando você entra na conta, o progresso que fez como visitante naquele aparelho passa para a sua conta.</p>
+            </div>
 
-        <div class="section">
-            <h2>4. Legal basis for processing (GDPR/LGPD)</h2>
-            <ul>
-                <li><strong>Contract performance:</strong> providing the service you requested</li>
-                <li><strong>Consent:</strong> for ad tracking (ATT on iOS) and notifications</li>
-                <li><strong>Legitimate interest:</strong> crash diagnostics and service improvement</li>
-            </ul>
-            <p style="margin-top: 0.75rem;">You may withdraw your consent at any time through the app or device settings.</p>
-        </div>
+            <div class="section">
+                <h2>3. Compras</h2>
+                <p>As assinaturas do KanjiCraft Pro e a compra vitalícia são processadas pela App Store (Apple) ou pelo Google Play. Nunca vemos os dados do seu cartão ou do seu pagamento.</p>
+                <p>Para saber se você tem o Pro, usamos a RevenueCat, um serviço de gestão de assinaturas. A RevenueCat recebe um identificador anônimo do app (ou o ID da sua conta, se você estiver conectado) e os comprovantes de compra da loja. Ela não recebe seu e-mail nem seus dados de estudo.</p>
+            </div>
 
-        <div class="section">
-            <h2>5. Storage and security</h2>
-            <p><strong>5.1 Local storage (offline-first)</strong><br>
-            Your learning data is stored primarily on your device using ObjectBox. The app works fully offline.</p>
-            <p style="margin-top: 0.75rem;"><strong>5.2 Cloud storage (optional)</strong><br>
-            If you create an account, your data may be synced with Supabase (hosted PostgreSQL). Row-level security (RLS) policies ensure only you can access your own data.</p>
-            <p style="margin-top: 0.75rem;"><strong>5.3 Encryption</strong><br>
-            All communications use HTTPS/TLS. Auth tokens are stored in Keychain (iOS) and EncryptedSharedPreferences (Android).</p>
-            <p style="margin-top: 0.75rem;"><strong>5.4 Retention</strong><br>
-            We retain your data as long as your account is active. Data from deleted accounts is removed within 30 days.</p>
-        </div>
+            <div class="section">
+                <h2>4. Anúncios</h2>
+                <p>Na versão gratuita, você pode ver anúncios do Google AdMob. Quem é Pro não vê anúncios.</p>
+                <p>Para exibir e medir anúncios, o Google pode coletar informações do aparelho, endereço IP, interações com anúncios e, se você permitir, o identificador de publicidade do aparelho.</p>
+                <p>Onde a lei exige (por exemplo, no Espaço Econômico Europeu, no Reino Unido e na Suíça), pedimos seu consentimento pelo formulário de consentimento do Google antes de usar dados pessoais em anúncios. No iPhone e no iPad, o aviso de Transparência de Rastreamento de Apps (ATT) da Apple pergunta se podemos usar seu identificador de publicidade para rastreamento. Se você recusar, ainda verá anúncios, mas eles não serão personalizados com esses dados.</p>
+                <p>Você pode mudar suas escolhas quando quiser. Onde o formulário de consentimento do Google se aplica, abra a seção Privacidade no Perfil. No iOS, vá em Ajustes → Privacidade e Segurança → Rastreamento. No Android, use as configurações de anúncios do aparelho, onde é possível redefinir ou excluir o ID de publicidade.</p>
+                <p>Anúncios premiados são sempre opcionais: você escolhe assistir a um para liberar uma lição extra ou recuperar uma sequência.</p>
+            </div>
 
-        <div class="section">
-            <h2>6. Data sharing</h2>
-            <p>We do not sell your personal data. We share data only with:</p>
-            <ul>
-                <li><strong>Supabase</strong> (Supabase Inc.) &mdash; authentication and data sync</li>
-                <li><strong>Google</strong> (Google LLC) &mdash; OAuth login, AdMob advertising</li>
-                <li><strong>Apple</strong> (Apple Inc.) &mdash; Sign in with Apple, SKAdNetwork</li>
-                <li><strong>RevenueCat</strong> (RevenueCat Inc.) &mdash; subscription management</li>
-                <li><strong>Firebase/Google</strong> (Google LLC) &mdash; crash reporting (Crashlytics)</li>
-            </ul>
-        </div>
+            <div class="section">
+                <h2>5. Estatísticas de uso e estabilidade</h2>
+                <p>Usamos o Firebase (do Google) para entender como o app é usado e corrigir problemas:</p>
+                <ul>
+                    <li>O Firebase Analytics registra eventos de uso, como sessões de estudo concluídas, telas visitadas e visualizações da tela do Pro. Ele não recebe o conteúdo dos seus estudos, seu nome nem seu e-mail. Se você estiver conectado, os eventos ficam associados ao ID da sua conta. Também registramos o idioma do app, seu objetivo de estudo e se você usa o Pro.</li>
+                    <li>O Firebase Crashlytics envia relatórios de falhas com detalhes técnicos, como o modelo do aparelho e a versão do sistema.</li>
+                    <li>O Firebase Remote Config baixa configurações de recursos, para ajustarmos o app sem precisar de atualização.</li>
+                </ul>
+                <p>Esses serviços usam um identificador aleatório da instalação do app.</p>
+            </div>
 
-        <div class="section">
-            <h2>7. Your rights</h2>
-            <p>Under the GDPR, LGPD, and CCPA, you have the right to:</p>
-            <ul>
-                <li>Access: request a copy of your personal data</li>
-                <li>Rectification: correct inaccurate data</li>
-                <li>Erasure: request deletion ("right to be forgotten")</li>
-                <li>Portability: receive your data in a structured format</li>
-                <li>Withdraw consent at any time</li>
-                <li>Object to processing based on legitimate interest</li>
-                <li>Non-discrimination (CCPA)</li>
-            </ul>
-            <p style="margin-top: 0.75rem;">You can delete your account directly in the app settings or contact us.</p>
-        </div>
+            <div class="section">
+                <h2>6. O que fica no seu aparelho</h2>
+                <ul>
+                    <li>O reconhecimento de escrita roda no próprio aparelho, com um modelo TensorFlow Lite. Seus desenhos nunca saem dele.</li>
+                    <li>A pronúncia usa o recurso de leitura em voz alta (text-to-speech) do próprio aparelho.</li>
+                    <li>Os lembretes de estudo são notificações locais, agendadas no seu aparelho para o horário que você escolher. Não usamos servidor de notificações push.</li>
+                    <li>O KanjiCraft não pede acesso à sua localização, contatos, fotos, câmera ou microfone.</li>
+                </ul>
+            </div>
 
-        <div class="section">
-            <h2>8. Guest mode</h2>
-            <p>You can use KanjiCraft without an account. No personally identifiable data is collected. All data is stored only on your device.</p>
-        </div>
+            <div class="section">
+                <h2>7. Com quem compartilhamos dados</h2>
+                <p>Não vendemos seus dados pessoais. Usamos apenas estes provedores para fazer o app funcionar:</p>
+                <ul>
+                    <li>Supabase — login, armazenamento e sincronização da conta</li>
+                    <li>Apple e Google — login (se você escolher), lojas de apps e pagamentos</li>
+                    <li>RevenueCat — status da assinatura</li>
+                    <li>Google AdMob — anúncios na versão gratuita</li>
+                    <li>Google Firebase — estatísticas de uso, relatórios de falhas e configurações remotas</li>
+                </ul>
+                <p>Cada provedor trata os dados de acordo com a própria política de privacidade.</p>
+            </div>
 
-        <div class="section">
-            <h2>9. Children</h2>
-            <p>KanjiCraft is not directed at children under 13. We do not knowingly collect data from children under 13.</p>
-        </div>
+            <div class="section">
+                <h2>8. Bases legais (LGPD e GDPR)</h2>
+                <ul>
+                    <li>Execução de contrato: para oferecer o app, sua conta, a sincronização e as compras.</li>
+                    <li>Consentimento: para anúncios personalizados e rastreamento, e para notificações. Você pode retirar o consentimento a qualquer momento.</li>
+                    <li>Legítimo interesse: para entender o uso do app, corrigir falhas e manter o serviço seguro.</li>
+                </ul>
+            </div>
 
-        <div class="section">
-            <h2>10. International data transfers</h2>
-            <p>Your data may be transferred to servers outside your country. We ensure transfers are protected by appropriate safeguards (standard contractual clauses).</p>
-        </div>
+            <div class="section">
+                <h2>9. Transferência internacional</h2>
+                <p>Nossos provedores podem tratar dados fora do seu país, inclusive nos Estados Unidos. Nesses casos, contamos com as salvaguardas que eles oferecem, como cláusulas contratuais padrão.</p>
+            </div>
 
-        <div class="section">
-            <h2>11. Changes to this policy</h2>
-            <p>We may update this policy from time to time. We will notify you of significant changes through the app.</p>
-        </div>
+            <div class="section">
+                <h2>10. Segurança</h2>
+                <p>Os dados trafegam com criptografia (HTTPS/TLS). No nosso servidor, regras de acesso garantem que cada conta só consiga ler os próprios dados. Nenhum sistema é 100% seguro, mas trabalhamos para proteger suas informações.</p>
+            </div>
 
-        <div class="section">
-            <h2>12. Contact</h2>
-            <p>Email: <a href="mailto:admin@becaptainstudio.com" style="color: var(--primary);">admin@becaptainstudio.com</a></p>
-            <p style="margin-top: 0.5rem;">For users in the EU, you may lodge a complaint with your local DPA. For users in Brazil, contact the ANPD.</p>
-        </div>
+            <div class="section">
+                <h2>11. Por quanto tempo guardamos e como excluir</h2>
+                <p>Guardamos os dados da conta enquanto ela existir.</p>
+                <p>Para excluir, vá em Perfil → Excluir conta. Isso apaga de forma permanente e imediata sua conta e todos os dados sincronizados dos nossos servidores. Cópias residuais em backups são eliminadas em até 30 dias. Os dados de estudo no seu aparelho também são apagados.</p>
+                <p>Se não conseguir acessar o app, envie um e-mail para <a href="mailto:admin@becaptainstudio.com">admin@becaptainstudio.com</a> a partir do e-mail da sua conta, com o assunto “Delete my KanjiCraft account”.</p>
+                <p>Excluir a conta não cancela uma assinatura da App Store ou do Google Play. Cancele nas configurações de assinaturas da loja.</p>
+                <p>Como visitante, seus dados ficam só no aparelho e são apagados quando você desinstala o app.</p>
+                <p>Dados mantidos pelos provedores acima (como o histórico de compras na Apple, no Google e na RevenueCat, ou estatísticas de uso e relatórios de falhas) seguem os prazos de retenção de cada um.</p>
+            </div>
 
-        <div class="footer">
-            <p>&copy; 2026 BeCaptain Studio. All rights reserved.</p>
-            <p style="margin-top: 0.25rem;"><a href="terms">Terms of Service</a> &middot; <a href="index">Home</a></p>
-        </div>
+            <div class="section">
+                <h2>12. Seus direitos</h2>
+                <p>Dependendo de onde você mora — por exemplo, pela LGPD (Brasil), pelo GDPR (União Europeia e Reino Unido), pela CCPA/CPRA (Califórnia) ou pela UU PDP (Indonésia) —, você tem direito a:</p>
+                <ul>
+                    <li>acessar seus dados pessoais e receber uma cópia;</li>
+                    <li>corrigir dados incorretos;</li>
+                    <li>excluir seus dados;</li>
+                    <li>receber seus dados em formato portátil;</li>
+                    <li>se opor a um tratamento ou retirar seu consentimento.</li>
+                </ul>
+                <p>Você não será tratado de forma diferente por exercer esses direitos.</p>
+                <p>Para exercê-los, escreva para <a href="mailto:admin@becaptainstudio.com">admin@becaptainstudio.com</a>. Podemos precisar confirmar que a conta é sua. Respondemos em até 15 dias para pedidos feitos com base na LGPD e em até 30 dias nos demais casos, salvo se a lei exigir prazo menor.</p>
+                <p>Você também pode reclamar a uma autoridade de proteção de dados, como a ANPD no Brasil.</p>
+            </div>
+
+            <div class="section">
+                <h2>13. Crianças</h2>
+                <p>O KanjiCraft não é direcionado a menores de 13 anos (ou de 16 anos no Espaço Econômico Europeu, onde essa idade se aplica). Não coletamos intencionalmente dados pessoais deles. Se você acredita que uma criança nos enviou dados pessoais, fale com a gente e nós os excluiremos.</p>
+            </div>
+
+            <div class="section">
+                <h2>14. Mudanças nesta política</h2>
+                <p>Se mudarmos esta política, atualizaremos a data no topo. Em mudanças importantes, avisaremos você no app.</p>
+            </div>
+
+            <div class="section">
+                <h2>15. Contato</h2>
+                <p>BeCaptain Studio<br>
+E-mail: <a href="mailto:admin@becaptainstudio.com">admin@becaptainstudio.com</a></p>
+            </div>
+
+            <div class="footer">
+                <p>&copy; 2026 BeCaptain Studio. Todos os direitos reservados.</p>
+                <p style="margin-top: 0.25rem;"><a href="privacy#pt">Privacidade</a> &middot; <a href="terms#pt">Termos</a> &middot; <a href="support#pt">Suporte</a> &middot; <a href="delete-account#pt">Excluir conta</a> &middot; <a href="index">Início</a></p>
+            </div>
+        </article>
+
+        <article id="en" lang="en" data-title="Privacy Policy - KanjiCraft">
+            <h1>Privacy Policy</h1>
+            <p class="updated">Last updated: October 8, 2026</p>
+
+            <div class="section">
+                <p>KanjiCraft is made by BeCaptain Studio (“we”, “us”). We are responsible for (the “controller” of) the personal data described here. This policy explains, in plain language, what the app collects, why, who helps us, and how you stay in control.</p>
+                <p>The short version:</p>
+                <ul>
+                    <li>You can study without an account. Then your study data stays only on your device.</li>
+                    <li>An account is optional. It backs up and syncs your progress.</li>
+                    <li>Your handwriting never leaves your device.</li>
+                    <li>We don’t sell your personal data.</li>
+                    <li>You can delete your account in the app at any time.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>1. Using KanjiCraft without an account</h2>
+                <p>You can use KanjiCraft as a guest. Your study data (kanji progress, review schedule, study days, XP, achievements and preferences) is saved only on your device. We don’t receive it, so we can’t recover it if you lose your device or delete the app.</p>
+                <p>The services described in sections 3 to 5 (purchases, ads, usage analytics and crash reports) work the same way with or without an account.</p>
+            </div>
+
+            <div class="section">
+                <h2>2. If you create an account</h2>
+                <p>An account is optional. You can sign up with email and password, with Google, or with Sign in with Apple (on iPhone and iPad).</p>
+                <p>We store:</p>
+                <ul>
+                    <li>your email address and display name;</li>
+                    <li>the link to your profile picture, if your sign-in provider shares one;</li>
+                    <li>your study progress: kanji progress and review schedule, study days, XP, achievements and app preferences (such as language, new kanji per day and reminder time).</li>
+                </ul>
+                <p>This data is stored on our backend, hosted by Supabase (a cloud infrastructure provider), so your progress is backed up and synced across your devices.</p>
+                <p>When you sign in, the progress you made as a guest on that device moves into your account.</p>
+            </div>
+
+            <div class="section">
+                <h2>3. Purchases</h2>
+                <p>KanjiCraft Pro subscriptions and the lifetime purchase are processed by the Apple App Store or Google Play. We never see your card or payment details.</p>
+                <p>To know whether you have Pro, we use RevenueCat, a subscription management service. RevenueCat receives an anonymous app user ID (or your account ID when you are signed in) and the purchase receipts from the store. It doesn’t receive your email or your study data.</p>
+            </div>
+
+            <div class="section">
+                <h2>4. Ads</h2>
+                <p>In the free version, you may see ads from Google AdMob. Pro users see no ads.</p>
+                <p>To show and measure ads, Google may collect device information, your IP address, ad interactions and, if you allow it, your device’s advertising ID.</p>
+                <p>Where the law requires it (for example in the European Economic Area, the UK and Switzerland), we ask for your consent through Google’s consent form before ads use personal data. On iPhone and iPad, Apple’s App Tracking Transparency (ATT) prompt asks whether we may use your advertising ID for tracking. If you say no, you still see ads, but they aren’t personalized with that data.</p>
+                <p>You can change your choices at any time. Where Google’s consent form applies, open the Privacy section in Profile. On iOS, go to Settings → Privacy &amp; Security → Tracking. On Android, use your device’s ads settings, where you can reset or delete your advertising ID.</p>
+                <p>Rewarded ads are always optional: you choose to watch one to unlock an extra lesson or to restore a streak.</p>
+            </div>
+
+            <div class="section">
+                <h2>5. Usage analytics and app stability</h2>
+                <p>We use Firebase (by Google) to understand how the app is used and to fix problems:</p>
+                <ul>
+                    <li>Firebase Analytics records usage events, such as finished study sessions, screens viewed and views of the Pro screen. It doesn’t receive your study content, name or email. When you are signed in, events are linked to your account ID. We also record your app language, your study goal and whether you use Pro.</li>
+                    <li>Firebase Crashlytics sends crash reports with technical details such as your device model and operating system version.</li>
+                    <li>Firebase Remote Config downloads feature settings, so we can adjust the app without an update.</li>
+                </ul>
+                <p>These services use a random identifier for your app installation.</p>
+            </div>
+
+            <div class="section">
+                <h2>6. What stays on your device</h2>
+                <ul>
+                    <li>Handwriting recognition runs on your device with a TensorFlow Lite model. Your drawings never leave the device.</li>
+                    <li>Pronunciation uses your device’s built-in text-to-speech.</li>
+                    <li>Study reminders are local notifications, scheduled on your device for the time you choose. We don’t use a push notification server.</li>
+                    <li>KanjiCraft doesn’t ask for access to your location, contacts, photos, camera or microphone.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>7. Who we share data with</h2>
+                <p>We don’t sell your personal data. We only use these providers to run the app:</p>
+                <ul>
+                    <li>Supabase — account sign-in, storage and sync</li>
+                    <li>Apple and Google — sign-in (if you choose them), app stores and payments</li>
+                    <li>RevenueCat — subscription status</li>
+                    <li>Google AdMob — ads in the free version</li>
+                    <li>Google Firebase — usage analytics, crash reports and remote settings</li>
+                </ul>
+                <p>Each provider processes data under its own privacy policy.</p>
+            </div>
+
+            <div class="section">
+                <h2>8. Legal bases (GDPR and LGPD)</h2>
+                <ul>
+                    <li>Contract: to provide the app, your account, sync and purchases.</li>
+                    <li>Consent: for personalized ads and tracking, and for notifications. You can withdraw your consent at any time.</li>
+                    <li>Legitimate interest: to understand how the app is used, fix crashes and keep the service secure.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>9. International transfers</h2>
+                <p>Our providers may process data outside your country, including in the United States. When this happens, we rely on the safeguards they offer, such as standard contractual clauses.</p>
+            </div>
+
+            <div class="section">
+                <h2>10. Security</h2>
+                <p>Data travels encrypted (HTTPS/TLS). On our backend, access rules make sure each account can read only its own data. No system is 100% secure, but we work to protect your information.</p>
+            </div>
+
+            <div class="section">
+                <h2>11. How long we keep data and how to delete it</h2>
+                <p>We keep your account data while your account exists.</p>
+                <p>To delete it, go to Profile → Delete account. This permanently deletes your account and all synced data from our servers right away. Residual copies in backups are purged within 30 days. The study data on your device is erased too.</p>
+                <p>If you can’t access the app, email <a href="mailto:admin@becaptainstudio.com">admin@becaptainstudio.com</a> from your account’s email address with the subject “Delete my KanjiCraft account”.</p>
+                <p>Deleting your account doesn’t cancel an App Store or Google Play subscription. Cancel it in your store’s subscription settings.</p>
+                <p>As a guest, your data is only on your device and is removed when you uninstall the app.</p>
+                <p>Data kept by the providers above (such as purchase history at Apple, Google and RevenueCat, or usage analytics and crash reports) follows each provider’s own retention periods.</p>
+            </div>
+
+            <div class="section">
+                <h2>12. Your rights</h2>
+                <p>Depending on where you live — for example under the LGPD (Brazil), the GDPR (EU and UK), the CCPA/CPRA (California) or the UU PDP (Indonesia) — you have the right to:</p>
+                <ul>
+                    <li>access your personal data and get a copy;</li>
+                    <li>correct inaccurate data;</li>
+                    <li>delete your data;</li>
+                    <li>receive your data in a portable format;</li>
+                    <li>object to processing or withdraw your consent.</li>
+                </ul>
+                <p>We won’t treat you differently for using these rights.</p>
+                <p>To use them, email <a href="mailto:admin@becaptainstudio.com">admin@becaptainstudio.com</a>. We may need to confirm that the account is yours. We reply within 15 days for requests under the LGPD and within 30 days in other cases, unless the law sets a shorter deadline.</p>
+                <p>You can also complain to a data protection authority, such as your local authority in the EU or the ANPD in Brazil.</p>
+            </div>
+
+            <div class="section">
+                <h2>13. Children</h2>
+                <p>KanjiCraft is not directed to children under 13 (or under 16 in the European Economic Area, where that age applies). We don’t knowingly collect their personal data. If you believe a child has given us personal data, contact us and we will delete it.</p>
+            </div>
+
+            <div class="section">
+                <h2>14. Changes to this policy</h2>
+                <p>If we change this policy, we’ll update the date at the top. For significant changes, we’ll let you know in the app.</p>
+            </div>
+
+            <div class="section">
+                <h2>15. Contact</h2>
+                <p>BeCaptain Studio<br>
+Email: <a href="mailto:admin@becaptainstudio.com">admin@becaptainstudio.com</a></p>
+            </div>
+
+            <div class="footer">
+                <p>&copy; 2026 BeCaptain Studio. All rights reserved.</p>
+                <p style="margin-top: 0.25rem;"><a href="privacy#en">Privacy</a> &middot; <a href="terms#en">Terms</a> &middot; <a href="support#en">Support</a> &middot; <a href="delete-account#en">Delete account</a> &middot; <a href="index">Home</a></p>
+            </div>
+        </article>
+
+        <article id="es" lang="es" data-title="Política de privacidad - KanjiCraft">
+            <h1>Política de privacidad</h1>
+            <p class="updated">Última actualización: 8 de octubre de 2026</p>
+
+            <div class="section">
+                <p>KanjiCraft es creado por BeCaptain Studio (“nosotros”). Somos los responsables de los datos personales que se describen aquí. Esta política explica, en lenguaje sencillo, qué recopila la app, para qué, quién nos ayuda y cómo mantienes el control.</p>
+                <p>En resumen:</p>
+                <ul>
+                    <li>Puedes estudiar sin cuenta. Así, tus datos de estudio se quedan solo en tu dispositivo.</li>
+                    <li>La cuenta es opcional y sirve para respaldar y sincronizar tu progreso.</li>
+                    <li>Tu escritura a mano nunca sale de tu dispositivo.</li>
+                    <li>No vendemos tus datos personales.</li>
+                    <li>Puedes eliminar tu cuenta en la app en cualquier momento.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>1. Usar KanjiCraft sin cuenta</h2>
+                <p>Puedes usar KanjiCraft como invitado. Tus datos de estudio (progreso en los kanji, calendario de repasos, días de estudio, XP, logros y preferencias) se guardan solo en tu dispositivo. No los recibimos, así que no podemos recuperarlos si pierdes el dispositivo o borras la app.</p>
+                <p>Los servicios descritos en las secciones 3 a 5 (compras, anuncios, estadísticas de uso e informes de fallos) funcionan igual con o sin cuenta.</p>
+            </div>
+
+            <div class="section">
+                <h2>2. Si creas una cuenta</h2>
+                <p>La cuenta es opcional. Puedes registrarte con correo y contraseña, con Google o con Apple (en iPhone y iPad).</p>
+                <p>Guardamos:</p>
+                <ul>
+                    <li>tu correo electrónico y tu nombre visible;</li>
+                    <li>el enlace a tu foto de perfil, si el servicio de inicio de sesión lo proporciona;</li>
+                    <li>tu progreso de estudio: progreso en los kanji y calendario de repasos, días de estudio, XP, logros y preferencias de la app (como idioma, kanji nuevos por día y hora del recordatorio).</li>
+                </ul>
+                <p>Estos datos se guardan en nuestro servidor, alojado en Supabase (proveedor de infraestructura en la nube), para que tu progreso tenga respaldo y se sincronice entre tus dispositivos.</p>
+                <p>Cuando inicias sesión, el progreso que hiciste como invitado en ese dispositivo pasa a tu cuenta.</p>
+            </div>
+
+            <div class="section">
+                <h2>3. Compras</h2>
+                <p>Las suscripciones a KanjiCraft Pro y la compra de por vida se procesan a través de App Store (Apple) o Google Play. Nunca vemos los datos de tu tarjeta ni de tu pago.</p>
+                <p>Para saber si tienes Pro, usamos RevenueCat, un servicio de gestión de suscripciones. RevenueCat recibe un identificador anónimo de la app (o el ID de tu cuenta, si iniciaste sesión) y los comprobantes de compra de la tienda. No recibe tu correo ni tus datos de estudio.</p>
+            </div>
+
+            <div class="section">
+                <h2>4. Anuncios</h2>
+                <p>En la versión gratuita puedes ver anuncios de Google AdMob. Los usuarios Pro no ven anuncios.</p>
+                <p>Para mostrar y medir anuncios, Google puede recopilar información del dispositivo, la dirección IP, las interacciones con anuncios y, si lo permites, el identificador de publicidad del dispositivo.</p>
+                <p>Donde la ley lo exige (por ejemplo, en el Espacio Económico Europeo, el Reino Unido y Suiza), te pedimos consentimiento mediante el formulario de consentimiento de Google antes de usar datos personales en anuncios. En iPhone y iPad, el aviso de Transparencia de Rastreo de Apps (ATT) de Apple te pregunta si podemos usar tu identificador de publicidad para rastreo. Si dices que no, igual verás anuncios, pero no se personalizarán con esos datos.</p>
+                <p>Puedes cambiar tus elecciones cuando quieras. Donde se aplica el formulario de consentimiento de Google, abre la sección Privacidad en Perfil. En iOS, ve a Ajustes → Privacidad y seguridad → Rastreo. En Android, usa la configuración de anuncios del dispositivo, donde puedes restablecer o borrar el ID de publicidad.</p>
+                <p>Los anuncios con recompensa siempre son opcionales: tú decides ver uno para desbloquear una lección extra o recuperar una racha.</p>
+            </div>
+
+            <div class="section">
+                <h2>5. Estadísticas de uso y estabilidad</h2>
+                <p>Usamos Firebase (de Google) para entender cómo se usa la app y corregir problemas:</p>
+                <ul>
+                    <li>Firebase Analytics registra eventos de uso, como sesiones de estudio terminadas, pantallas vistas y visitas a la pantalla de Pro. No recibe el contenido de tus estudios, tu nombre ni tu correo. Si iniciaste sesión, los eventos se asocian al ID de tu cuenta. También registramos el idioma de la app, tu objetivo de estudio y si usas Pro.</li>
+                    <li>Firebase Crashlytics envía informes de fallos con detalles técnicos, como el modelo del dispositivo y la versión del sistema.</li>
+                    <li>Firebase Remote Config descarga ajustes de funciones, para que podamos ajustar la app sin una actualización.</li>
+                </ul>
+                <p>Estos servicios usan un identificador aleatorio de la instalación de la app.</p>
+            </div>
+
+            <div class="section">
+                <h2>6. Lo que se queda en tu dispositivo</h2>
+                <ul>
+                    <li>El reconocimiento de escritura funciona en el propio dispositivo, con un modelo de TensorFlow Lite. Tus trazos nunca salen de él.</li>
+                    <li>La pronunciación usa la función de texto a voz de tu dispositivo.</li>
+                    <li>Los recordatorios de estudio son notificaciones locales, programadas en tu dispositivo para la hora que elijas. No usamos un servidor de notificaciones push.</li>
+                    <li>KanjiCraft no pide acceso a tu ubicación, contactos, fotos, cámara ni micrófono.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>7. Con quién compartimos datos</h2>
+                <p>No vendemos tus datos personales. Solo usamos estos proveedores para que la app funcione:</p>
+                <ul>
+                    <li>Supabase — inicio de sesión, almacenamiento y sincronización de la cuenta</li>
+                    <li>Apple y Google — inicio de sesión (si los eliges), tiendas de apps y pagos</li>
+                    <li>RevenueCat — estado de la suscripción</li>
+                    <li>Google AdMob — anuncios en la versión gratuita</li>
+                    <li>Google Firebase — estadísticas de uso, informes de fallos y ajustes remotos</li>
+                </ul>
+                <p>Cada proveedor trata los datos según su propia política de privacidad.</p>
+            </div>
+
+            <div class="section">
+                <h2>8. Bases legales (RGPD y LGPD)</h2>
+                <ul>
+                    <li>Ejecución de un contrato: para ofrecerte la app, tu cuenta, la sincronización y las compras.</li>
+                    <li>Consentimiento: para anuncios personalizados y rastreo, y para notificaciones. Puedes retirar tu consentimiento en cualquier momento.</li>
+                    <li>Interés legítimo: para entender el uso de la app, corregir fallos y mantener el servicio seguro.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>9. Transferencias internacionales</h2>
+                <p>Nuestros proveedores pueden tratar datos fuera de tu país, incluso en Estados Unidos. En esos casos, nos apoyamos en las garantías que ofrecen, como las cláusulas contractuales tipo.</p>
+            </div>
+
+            <div class="section">
+                <h2>10. Seguridad</h2>
+                <p>Los datos viajan cifrados (HTTPS/TLS). En nuestro servidor, reglas de acceso garantizan que cada cuenta solo pueda leer sus propios datos. Ningún sistema es 100 % seguro, pero trabajamos para proteger tu información.</p>
+            </div>
+
+            <div class="section">
+                <h2>11. Cuánto tiempo guardamos los datos y cómo eliminarlos</h2>
+                <p>Guardamos los datos de la cuenta mientras exista.</p>
+                <p>Para eliminarla, ve a Perfil → Eliminar cuenta. Esto borra de forma permanente e inmediata tu cuenta y todos los datos sincronizados de nuestros servidores. Las copias residuales en respaldos se eliminan en un plazo de 30 días. Los datos de estudio de tu dispositivo también se borran.</p>
+                <p>Si no puedes acceder a la app, escribe a <a href="mailto:admin@becaptainstudio.com">admin@becaptainstudio.com</a> desde el correo de tu cuenta, con el asunto “Delete my KanjiCraft account”.</p>
+                <p>Eliminar la cuenta no cancela una suscripción de App Store o Google Play. Cancélala en la configuración de suscripciones de la tienda.</p>
+                <p>Como invitado, tus datos están solo en el dispositivo y se borran al desinstalar la app.</p>
+                <p>Los datos que guardan los proveedores mencionados (como el historial de compras en Apple, Google y RevenueCat, o las estadísticas de uso e informes de fallos) siguen sus propios plazos de conservación.</p>
+            </div>
+
+            <div class="section">
+                <h2>12. Tus derechos</h2>
+                <p>Según dónde vivas —por ejemplo, conforme a la LGPD (Brasil), el RGPD (Unión Europea y Reino Unido), la CCPA/CPRA (California) o la UU PDP (Indonesia)—, tienes derecho a:</p>
+                <ul>
+                    <li>acceder a tus datos personales y recibir una copia;</li>
+                    <li>corregir datos inexactos;</li>
+                    <li>eliminar tus datos;</li>
+                    <li>recibir tus datos en un formato portable;</li>
+                    <li>oponerte a un tratamiento o retirar tu consentimiento.</li>
+                </ul>
+                <p>No te trataremos de forma distinta por ejercer estos derechos.</p>
+                <p>Para ejercerlos, escribe a <a href="mailto:admin@becaptainstudio.com">admin@becaptainstudio.com</a>. Es posible que necesitemos confirmar que la cuenta es tuya. Respondemos en un plazo de 15 días para solicitudes basadas en la LGPD y de 30 días en los demás casos, salvo que la ley exija un plazo menor.</p>
+                <p>También puedes presentar un reclamo ante una autoridad de protección de datos, como la de tu país en la Unión Europea o la ANPD en Brasil.</p>
+            </div>
+
+            <div class="section">
+                <h2>13. Menores</h2>
+                <p>KanjiCraft no está dirigido a menores de 13 años (o de 16 en el Espacio Económico Europeo, donde se aplica esa edad). No recopilamos sus datos personales a sabiendas. Si crees que un menor nos dio datos personales, contáctanos y los eliminaremos.</p>
+            </div>
+
+            <div class="section">
+                <h2>14. Cambios en esta política</h2>
+                <p>Si cambiamos esta política, actualizaremos la fecha al inicio. Si los cambios son importantes, te avisaremos en la app.</p>
+            </div>
+
+            <div class="section">
+                <h2>15. Contacto</h2>
+                <p>BeCaptain Studio<br>
+Correo: <a href="mailto:admin@becaptainstudio.com">admin@becaptainstudio.com</a></p>
+            </div>
+
+            <div class="footer">
+                <p>&copy; 2026 BeCaptain Studio. Todos los derechos reservados.</p>
+                <p style="margin-top: 0.25rem;"><a href="privacy#es">Privacidad</a> &middot; <a href="terms#es">Términos</a> &middot; <a href="support#es">Soporte</a> &middot; <a href="delete-account#es">Eliminar cuenta</a> &middot; <a href="index">Inicio</a></p>
+            </div>
+        </article>
+
+        <article id="id" lang="id" data-title="Kebijakan Privasi - KanjiCraft">
+            <h1>Kebijakan Privasi</h1>
+            <p class="updated">Terakhir diperbarui: 8 Oktober 2026</p>
+
+            <div class="section">
+                <p>KanjiCraft dibuat oleh BeCaptain Studio (“kami”). Kami adalah pengendali data pribadi yang dijelaskan di sini. Kebijakan ini menjelaskan dengan bahasa sederhana data apa yang dikumpulkan aplikasi, untuk apa, siapa yang membantu kami, dan bagaimana Anda tetap memegang kendali.</p>
+                <p>Ringkasnya:</p>
+                <ul>
+                    <li>Anda bisa belajar tanpa akun. Dengan begitu, data belajar Anda hanya tersimpan di perangkat Anda.</li>
+                    <li>Akun bersifat opsional dan berguna untuk mencadangkan serta menyinkronkan progres Anda.</li>
+                    <li>Tulisan tangan Anda tidak pernah keluar dari perangkat.</li>
+                    <li>Kami tidak menjual data pribadi Anda.</li>
+                    <li>Anda bisa menghapus akun di aplikasi kapan saja.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>1. Menggunakan KanjiCraft tanpa akun</h2>
+                <p>Anda bisa menggunakan KanjiCraft sebagai tamu. Data belajar Anda (progres kanji, jadwal ulasan, hari belajar, XP, pencapaian, dan preferensi) hanya disimpan di perangkat Anda. Kami tidak menerimanya, jadi kami tidak bisa memulihkannya jika perangkat Anda hilang atau aplikasi dihapus.</p>
+                <p>Layanan yang dijelaskan di bagian 3 sampai 5 (pembelian, iklan, statistik penggunaan, dan laporan error) berjalan sama, baik dengan maupun tanpa akun.</p>
+            </div>
+
+            <div class="section">
+                <h2>2. Jika Anda membuat akun</h2>
+                <p>Akun bersifat opsional. Anda bisa mendaftar dengan email dan kata sandi, dengan Google, atau dengan Apple (di iPhone dan iPad).</p>
+                <p>Kami menyimpan:</p>
+                <ul>
+                    <li>alamat email dan nama tampilan Anda;</li>
+                    <li>tautan foto profil Anda, jika layanan login memberikannya;</li>
+                    <li>progres belajar Anda: progres kanji dan jadwal ulasan, hari belajar, XP, pencapaian, serta preferensi aplikasi (seperti bahasa, jumlah kanji baru per hari, dan jam pengingat).</li>
+                </ul>
+                <p>Data ini disimpan di server kami yang berjalan di Supabase (penyedia infrastruktur cloud), agar progres Anda tercadangkan dan tersinkron di semua perangkat Anda.</p>
+                <p>Saat Anda masuk, progres yang Anda buat sebagai tamu di perangkat itu akan dipindahkan ke akun Anda.</p>
+            </div>
+
+            <div class="section">
+                <h2>3. Pembelian</h2>
+                <p>Langganan KanjiCraft Pro dan pembelian seumur hidup diproses oleh App Store (Apple) atau Google Play. Kami tidak pernah melihat data kartu atau pembayaran Anda.</p>
+                <p>Untuk mengetahui apakah Anda memiliki Pro, kami menggunakan RevenueCat, layanan pengelolaan langganan. RevenueCat menerima ID pengguna aplikasi yang anonim (atau ID akun Anda jika Anda sudah masuk) dan bukti pembelian dari toko. RevenueCat tidak menerima email maupun data belajar Anda.</p>
+            </div>
+
+            <div class="section">
+                <h2>4. Iklan</h2>
+                <p>Di versi gratis, Anda mungkin melihat iklan dari Google AdMob. Pengguna Pro tidak melihat iklan.</p>
+                <p>Untuk menampilkan dan mengukur iklan, Google dapat mengumpulkan informasi perangkat, alamat IP, interaksi dengan iklan, dan, jika Anda izinkan, ID iklan perangkat Anda.</p>
+                <p>Jika diwajibkan oleh hukum (misalnya di Kawasan Ekonomi Eropa, Inggris, dan Swiss), kami meminta persetujuan Anda melalui formulir persetujuan Google sebelum iklan menggunakan data pribadi. Di iPhone dan iPad, pertanyaan App Tracking Transparency (ATT) dari Apple menanyakan apakah kami boleh menggunakan ID iklan Anda untuk pelacakan. Jika Anda menolak, Anda tetap melihat iklan, tetapi iklan itu tidak dipersonalisasi dengan data tersebut.</p>
+                <p>Anda bisa mengubah pilihan kapan saja. Jika formulir persetujuan Google berlaku, buka bagian Privasi di Profil. Di iOS, buka Pengaturan → Privasi &amp; Keamanan → Pelacakan. Di Android, gunakan pengaturan iklan di perangkat, tempat Anda bisa mereset atau menghapus ID iklan.</p>
+                <p>Iklan berhadiah selalu opsional: Anda sendiri yang memilih untuk menontonnya agar bisa membuka satu pelajaran tambahan atau memulihkan streak.</p>
+            </div>
+
+            <div class="section">
+                <h2>5. Statistik penggunaan dan stabilitas</h2>
+                <p>Kami menggunakan Firebase (dari Google) untuk memahami cara aplikasi digunakan dan memperbaiki masalah:</p>
+                <ul>
+                    <li>Firebase Analytics mencatat peristiwa penggunaan, seperti sesi belajar yang selesai, layar yang dibuka, dan kunjungan ke layar Pro. Firebase Analytics tidak menerima isi belajar, nama, atau email Anda. Jika Anda sudah masuk, peristiwa ini dikaitkan dengan ID akun Anda. Kami juga mencatat bahasa aplikasi, tujuan belajar Anda, dan apakah Anda menggunakan Pro.</li>
+                    <li>Firebase Crashlytics mengirim laporan error (crash) berisi detail teknis, seperti model perangkat dan versi sistem operasi.</li>
+                    <li>Firebase Remote Config mengunduh pengaturan fitur, agar kami bisa menyesuaikan aplikasi tanpa pembaruan.</li>
+                </ul>
+                <p>Layanan ini menggunakan ID acak untuk instalasi aplikasi Anda.</p>
+            </div>
+
+            <div class="section">
+                <h2>6. Yang tetap ada di perangkat Anda</h2>
+                <ul>
+                    <li>Pengenalan tulisan tangan berjalan di perangkat dengan model TensorFlow Lite. Gambar tulisan Anda tidak pernah keluar dari perangkat.</li>
+                    <li>Pelafalan menggunakan fitur text-to-speech bawaan perangkat Anda.</li>
+                    <li>Pengingat belajar adalah notifikasi lokal yang dijadwalkan di perangkat Anda pada jam yang Anda pilih. Kami tidak menggunakan server notifikasi push.</li>
+                    <li>KanjiCraft tidak meminta akses ke lokasi, kontak, foto, kamera, atau mikrofon Anda.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>7. Dengan siapa kami berbagi data</h2>
+                <p>Kami tidak menjual data pribadi Anda. Kami hanya menggunakan penyedia berikut agar aplikasi berjalan:</p>
+                <ul>
+                    <li>Supabase — login, penyimpanan, dan sinkronisasi akun</li>
+                    <li>Apple dan Google — login (jika Anda memilihnya), toko aplikasi, dan pembayaran</li>
+                    <li>RevenueCat — status langganan</li>
+                    <li>Google AdMob — iklan di versi gratis</li>
+                    <li>Google Firebase — statistik penggunaan, laporan error, dan pengaturan jarak jauh</li>
+                </ul>
+                <p>Setiap penyedia memproses data sesuai kebijakan privasinya masing-masing.</p>
+            </div>
+
+            <div class="section">
+                <h2>8. Dasar pemrosesan data</h2>
+                <ul>
+                    <li>Pelaksanaan perjanjian: untuk menyediakan aplikasi, akun, sinkronisasi, dan pembelian.</li>
+                    <li>Persetujuan: untuk iklan yang dipersonalisasi dan pelacakan, serta untuk notifikasi. Anda bisa menarik persetujuan kapan saja.</li>
+                    <li>Kepentingan yang sah: untuk memahami penggunaan aplikasi, memperbaiki error, dan menjaga keamanan layanan.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>9. Transfer data internasional</h2>
+                <p>Penyedia kami dapat memproses data di luar negara Anda, termasuk di Amerika Serikat. Dalam hal ini, kami mengandalkan perlindungan yang mereka sediakan, seperti klausul kontrak standar.</p>
+            </div>
+
+            <div class="section">
+                <h2>10. Keamanan</h2>
+                <p>Data dikirim dalam keadaan terenkripsi (HTTPS/TLS). Di server kami, aturan akses memastikan setiap akun hanya bisa membaca datanya sendiri. Tidak ada sistem yang 100% aman, tetapi kami berupaya melindungi informasi Anda.</p>
+            </div>
+
+            <div class="section">
+                <h2>11. Berapa lama data disimpan dan cara menghapusnya</h2>
+                <p>Kami menyimpan data akun selama akun tersebut ada.</p>
+                <p>Untuk menghapusnya, buka Profil → Hapus akun. Ini akan langsung menghapus akun Anda dan semua data yang tersinkron dari server kami secara permanen. Salinan sisa di cadangan (backup) dihapus dalam 30 hari. Data belajar di perangkat Anda juga ikut dihapus.</p>
+                <p>Jika Anda tidak bisa mengakses aplikasi, kirim email ke <a href="mailto:admin@becaptainstudio.com">admin@becaptainstudio.com</a> dari alamat email akun Anda dengan subjek “Delete my KanjiCraft account”.</p>
+                <p>Menghapus akun tidak membatalkan langganan App Store atau Google Play. Batalkan langganan di pengaturan langganan toko.</p>
+                <p>Sebagai tamu, data Anda hanya ada di perangkat dan akan terhapus saat aplikasi di-uninstall.</p>
+                <p>Data yang disimpan oleh penyedia di atas (seperti riwayat pembelian di Apple, Google, dan RevenueCat, atau statistik penggunaan dan laporan error) mengikuti masa penyimpanan masing-masing penyedia.</p>
+            </div>
+
+            <div class="section">
+                <h2>12. Hak Anda</h2>
+                <p>Tergantung tempat tinggal Anda — misalnya berdasarkan UU PDP (Indonesia), LGPD (Brasil), GDPR (Uni Eropa dan Inggris), atau CCPA/CPRA (California) — Anda berhak untuk:</p>
+                <ul>
+                    <li>mengakses data pribadi Anda dan mendapatkan salinannya;</li>
+                    <li>memperbaiki data yang tidak akurat;</li>
+                    <li>menghapus data Anda;</li>
+                    <li>menerima data Anda dalam format yang dapat dipindahkan;</li>
+                    <li>menolak pemrosesan atau menarik persetujuan.</li>
+                </ul>
+                <p>Anda tidak akan diperlakukan berbeda karena menggunakan hak-hak ini.</p>
+                <p>Untuk menggunakannya, kirim email ke <a href="mailto:admin@becaptainstudio.com">admin@becaptainstudio.com</a>. Kami mungkin perlu memastikan bahwa akun tersebut milik Anda. Kami membalas dalam 15 hari untuk permintaan berdasarkan LGPD dan dalam 30 hari untuk kasus lain, kecuali hukum menetapkan batas waktu yang lebih singkat.</p>
+                <p>Anda juga dapat mengajukan pengaduan ke otoritas pelindungan data di negara Anda.</p>
+            </div>
+
+            <div class="section">
+                <h2>13. Anak-anak</h2>
+                <p>KanjiCraft tidak ditujukan untuk anak di bawah 13 tahun (atau di bawah 16 tahun di Kawasan Ekonomi Eropa, jika batas usia itu berlaku). Kami tidak dengan sengaja mengumpulkan data pribadi mereka. Jika Anda yakin seorang anak telah memberikan data pribadi kepada kami, hubungi kami dan kami akan menghapusnya.</p>
+            </div>
+
+            <div class="section">
+                <h2>14. Perubahan kebijakan ini</h2>
+                <p>Jika kami mengubah kebijakan ini, kami akan memperbarui tanggal di bagian atas. Untuk perubahan penting, kami akan memberi tahu Anda di aplikasi.</p>
+            </div>
+
+            <div class="section">
+                <h2>15. Kontak</h2>
+                <p>BeCaptain Studio<br>
+Email: <a href="mailto:admin@becaptainstudio.com">admin@becaptainstudio.com</a></p>
+            </div>
+
+            <div class="footer">
+                <p>&copy; 2026 BeCaptain Studio. Hak cipta dilindungi.</p>
+                <p style="margin-top: 0.25rem;"><a href="privacy#id">Privasi</a> &middot; <a href="terms#id">Ketentuan</a> &middot; <a href="support#id">Dukungan</a> &middot; <a href="delete-account#id">Hapus akun</a> &middot; <a href="index">Beranda</a></p>
+            </div>
+        </article>
+
     </div>
+    <script>
+        (function () {
+            var langs = ['pt', 'en', 'es', 'id'];
+            function pick() {
+                var h = location.hash.slice(1);
+                if (langs.indexOf(h) >= 0) return h;
+                var n = (navigator.language || 'en').slice(0, 2).toLowerCase();
+                return langs.indexOf(n) >= 0 ? n : 'en';
+            }
+            function show() {
+                var current = pick();
+                langs.forEach(function (l) {
+                    var article = document.getElementById(l);
+                    var link = document.querySelector('.langs a[href="#' + l + '"]');
+                    article.hidden = l !== current;
+                    if (l === current) {
+                        document.documentElement.lang = article.lang;
+                        document.title = article.getAttribute('data-title');
+                        link.setAttribute('aria-current', 'true');
+                    } else {
+                        link.removeAttribute('aria-current');
+                    }
+                });
+            }
+            window.addEventListener('hashchange', function () { show(); window.scrollTo(0, 0); });
+            show();
+        })();
+    </script>
 </body>
 </html>

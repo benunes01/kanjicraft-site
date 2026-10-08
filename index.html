@@ -3,150 +3,247 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KanjiCraft - Learn Japanese Kanji</title>
+    <title>KanjiCraft - Kanji from N5 to N1</title>
+    <meta name="description" content="Learn the 2,202 JLPT kanji, from N5 to N1, with memory hints, stroke order, handwriting practice and spaced repetition. In Portuguese, English, Spanish and Indonesian.">
     <style>
-        :root {
-            --primary: #4F46E5;
-            --bg: #0D1642;
-            --bg-card: #1A1F4E;
-            --text: #F8FAFC;
-            --text-secondary: #94A3B8;
-            --gold: #F59E0B;
-        }
+        :root { --primary: #4F46E5; --link: #818CF8; --bg: #0D1642; --bg-card: #1A1F4E; --text: #F8FAFC; --text-secondary: #CBD5E1; --gold: #F59E0B; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 2rem 1rem;
-        }
-        .container {
-            max-width: 640px;
-            width: 100%;
-            text-align: center;
-        }
-        .logo {
-            font-size: 4rem;
-            margin-bottom: 0.5rem;
-        }
-        h1 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 0.5rem;
-            background: linear-gradient(135deg, var(--primary), var(--gold));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .tagline {
-            color: var(--text-secondary);
-            font-size: 1.1rem;
-            margin-bottom: 2.5rem;
-        }
-        .card {
-            background: var(--bg-card);
-            border-radius: 16px;
-            padding: 2rem;
-            margin-bottom: 1.5rem;
-            text-align: left;
-        }
-        .card h2 {
-            font-size: 1.2rem;
-            margin-bottom: 0.75rem;
-            color: var(--gold);
-        }
-        .card p, .card li {
-            color: var(--text-secondary);
-            line-height: 1.6;
-            font-size: 0.95rem;
-        }
-        .card ul {
-            padding-left: 1.25rem;
-            margin-top: 0.5rem;
-        }
-        .card li { margin-bottom: 0.4rem; }
-        .links {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            margin-top: 2rem;
-            flex-wrap: wrap;
-        }
-        .links a {
-            color: var(--primary);
-            text-decoration: none;
-            padding: 0.75rem 1.5rem;
-            border: 1px solid var(--primary);
-            border-radius: 12px;
-            font-weight: 600;
-            transition: all 0.2s;
-        }
-        .links a:hover {
-            background: var(--primary);
-            color: var(--text);
-        }
-        .footer {
-            margin-top: 3rem;
-            color: var(--text-secondary);
-            font-size: 0.85rem;
-        }
-        .footer a { color: var(--primary); text-decoration: none; }
-        .badge {
-            display: inline-block;
-            background: linear-gradient(135deg, var(--primary), #7C3AED);
-            color: white;
-            padding: 0.25rem 0.75rem;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            margin-left: 0.5rem;
-            vertical-align: middle;
-        }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; padding: 2rem 1rem; }
+        .container { max-width: 720px; margin: 0 auto; }
+        .back { color: var(--link); text-decoration: none; font-size: 0.9rem; display: inline-block; margin-bottom: 1rem; }
+        .back:hover { text-decoration: underline; }
+        .langs { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2rem; }
+        .langs a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; padding: 0.35rem 0.85rem; border: 1px solid rgba(203, 213, 225, 0.25); border-radius: 999px; }
+        .langs a:hover { color: var(--text); border-color: var(--link); }
+        .langs a[aria-current="true"] { color: var(--text); border-color: var(--gold); background: rgba(245, 158, 11, 0.1); }
+        h1 { font-size: 2rem; font-weight: 800; margin-bottom: 0.25rem; }
+        .updated { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 2rem; }
+        .section { background: var(--bg-card); border-radius: 12px; padding: 1.5rem; margin-bottom: 1rem; }
+        .section h2 { font-size: 1.1rem; color: var(--gold); margin-bottom: 0.75rem; }
+        .section p, .section li { color: var(--text-secondary); line-height: 1.7; font-size: 0.92rem; }
+        .section > * + * { margin-top: 0.75rem; }
+        .section ul, .section ol { padding-left: 1.25rem; }
+        .section li { margin-bottom: 0.3rem; }
+        .section a { color: var(--link); overflow-wrap: anywhere; }
+        .highlight { background: rgba(245, 158, 11, 0.1); border-left: 3px solid var(--gold); padding: 1rem 1.25rem; border-radius: 0 8px 8px 0; }
+        .highlight p { color: var(--text) !important; }
+        .highlight p + p { margin-top: 0.5rem; }
+        .footer { text-align: center; margin: 2rem 0 3rem; color: var(--text-secondary); font-size: 0.85rem; }
+        .footer a { color: var(--link); text-decoration: none; }
+        .footer a:hover { text-decoration: underline; }
+        .tagline { color: var(--text-secondary); font-size: 1.05rem; margin-bottom: 2rem; }
+        .links { display: flex; flex-wrap: wrap; gap: 0.75rem 1.25rem; justify-content: center; margin-top: 2rem; }
+        .links a { color: var(--link); text-decoration: none; font-size: 0.92rem; }
+        .links a:hover { text-decoration: underline; }
+        .badge { display: inline-block; background: var(--gold); color: #0D1642; font-size: 0.7rem; font-weight: 800; padding: 0.15rem 0.5rem; border-radius: 999px; vertical-align: middle; margin-left: 0.4rem; }
+        [hidden] { display: none !important; }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="logo">漢</div>
-        <h1>KanjiCraft</h1>
-        <p class="tagline">Master Japanese Kanji with AI-powered learning</p>
+        <nav class="langs" aria-label="Language">
+            <a href="#pt" hreflang="pt-BR" lang="pt-BR">Português</a>
+            <a href="#en" hreflang="en" lang="en">English</a>
+            <a href="#es" hreflang="es" lang="es">Español</a>
+            <a href="#id" hreflang="id" lang="id">Bahasa Indonesia</a>
+        </nav>
 
-        <div class="card">
-            <h2>About</h2>
-            <p>KanjiCraft is a Japanese kanji learning app featuring:</p>
-            <ul>
-                <li>Interactive lessons with mnemonics and vocabulary</li>
-                <li>Spaced repetition (SM-2) for efficient memorization</li>
-                <li>Handwriting practice with on-device AI recognition</li>
-                <li>Quizzes, XP, streaks, and achievements</li>
-                <li>JLPT N5 to N1 coverage (2,000+ kanji)</li>
-                <li>Available in Portuguese, English, and Spanish</li>
-            </ul>
-        </div>
+        <article id="pt" lang="pt-BR" data-title="KanjiCraft - Kanji do N5 ao N1">
+            <h1>KanjiCraft</h1>
+            <p class="tagline">Kanji em português, do N5 ao N1.</p>
 
-        <div class="card">
-            <h2>AI Disclaimer</h2>
-            <p>Some educational content in KanjiCraft — including kanji meanings, mnemonics, example vocabulary, and stroke data — may have been generated or curated with the assistance of AI tools. While we strive for accuracy, language learning content may contain errors. KanjiCraft is a supplementary study tool and should not be considered the sole reference for JLPT preparation or academic purposes.</p>
-            <p style="margin-top: 0.75rem;">Handwriting recognition uses an on-device machine learning model. No writing data is sent to external servers.</p>
-        </div>
+            <div class="section">
+                <h2>O que é</h2>
+                <p>O KanjiCraft ensina os 2.202 kanji do JLPT, do N5 ao N1, com significado, dica para lembrar e palavras de exemplo no seu idioma.</p>
+                <ul>
+                    <li>Sessão do dia: revisões na hora certa e kanji novos no seu ritmo (repetição espaçada FSRS).</li>
+                    <li>Lições com ordem dos traços animada, leituras, áudio, dica para lembrar e palavras comuns.</li>
+                    <li>Escrita: trace o kanji e depois escreva de memória, com correção traço a traço feita no próprio aparelho.</li>
+                    <li>Treino rápido e uma lista dos kanji que você mais esquece.</li>
+                    <li>Sequência com congelamentos, conquistas e progresso por nível.</li>
+                    <li>Funciona sem internet. A conta é opcional e serve para guardar e sincronizar o progresso.</li>
+                    <li>Em português, inglês, espanhol e indonésio.</li>
+                </ul>
+            </div>
 
-        <div class="card">
-            <h2>Free vs Pro <span class="badge">PRO</span></h2>
-            <p><strong>Free:</strong> JLPT N5 (~100 kanji), all core features, ads between sessions.</p>
-            <p style="margin-top: 0.5rem;"><strong>Pro:</strong> All JLPT levels (N5-N1, 2,000+ kanji), no ads, advanced statistics.</p>
-        </div>
+            <div class="section">
+                <h2>Grátis e Pro <span class="badge">PRO</span></h2>
+                <p><strong>Grátis:</strong> todo o N5 (103 kanji), o tema “No restaurante”, revisões sempre liberadas e, depois do N5, uma lição extra do N4 por dia assistindo a um anúncio. A versão grátis tem anúncios.</p>
+                <p><strong>Pro:</strong> todos os 2.202 kanji do N5 ao N1, os 8 temas do dia a dia, sem anúncios e estatísticas avançadas (previsão e retenção). Os preços aparecem no app, na moeda da sua loja.</p>
+            </div>
 
-        <div class="links">
-            <a href="privacy">Privacy Policy</a>
-            <a href="terms">Terms of Service</a>
-        </div>
+            <div class="section">
+                <h2>Sobre o conteúdo</h2>
+                <p>Os kanji, leituras e palavras vêm de dicionários abertos (KANJIDIC2 e JMdict) e a ordem dos traços vem do KanjiVG. Os significados, as dicas para lembrar e as traduções foram escritos com a ajuda de ferramentas de IA e podem conter erros. Encontrou um? Conte para a gente pelo suporte.</p>
+            </div>
 
-        <div class="footer">
-            <p>&copy; 2026 BeCaptain Studio. All rights reserved.</p>
-            <p style="margin-top: 0.5rem;">Contact: <a href="mailto:admin@becaptainstudio.com">admin@becaptainstudio.com</a></p>
-        </div>
+            <nav class="links">
+                <a href="support#pt">Suporte</a>
+                <a href="privacy#pt">Política de Privacidade</a>
+                <a href="terms#pt">Termos de Uso</a>
+                <a href="delete-account#pt">Excluir conta</a>
+            </nav>
+
+            <div class="footer">
+                <p>&copy; 2026 BeCaptain Studio. Todos os direitos reservados.</p>
+                <p style="margin-top: 0.5rem;">Contato: <a href="mailto:admin@becaptainstudio.com">admin@becaptainstudio.com</a></p>
+            </div>
+        </article>
+
+        <article id="en" lang="en" data-title="KanjiCraft - Kanji from N5 to N1">
+            <h1>KanjiCraft</h1>
+            <p class="tagline">Kanji made clear, from N5 to N1.</p>
+
+            <div class="section">
+                <h2>What it is</h2>
+                <p>KanjiCraft teaches the 2,202 JLPT kanji, from N5 to N1, with meanings, memory hints and example words in your language.</p>
+                <ul>
+                    <li>A daily session: reviews at the right time and new kanji at your pace (FSRS spaced repetition).</li>
+                    <li>Lessons with animated stroke order, readings, audio, a memory hint and common words.</li>
+                    <li>Writing: trace the kanji, then write it from memory, with stroke-by-stroke feedback computed on your device.</li>
+                    <li>Quick training and a list of the kanji you forget most.</li>
+                    <li>Streaks with freezes, achievements and progress by level.</li>
+                    <li>Works offline. An account is optional and backs up and syncs your progress.</li>
+                    <li>In Portuguese, English, Spanish and Indonesian.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Free and Pro <span class="badge">PRO</span></h2>
+                <p><strong>Free:</strong> all of N5 (103 kanji), the “At the restaurant” theme, reviews always included and, after N5, one extra N4 lesson a day by watching an ad. The free version shows ads.</p>
+                <p><strong>Pro:</strong> all 2,202 kanji from N5 to N1, all 8 everyday themes, no ads and advanced stats (forecast and retention). Prices are shown in the app, in your store’s currency.</p>
+            </div>
+
+            <div class="section">
+                <h2>About the content</h2>
+                <p>Kanji, readings and words come from open dictionaries (KANJIDIC2 and JMdict), and stroke order comes from KanjiVG. Meanings, memory hints and translations were written with the help of AI tools and may contain errors. Found one? Let us know through support.</p>
+            </div>
+
+            <nav class="links">
+                <a href="support#en">Support</a>
+                <a href="privacy#en">Privacy Policy</a>
+                <a href="terms#en">Terms of Use</a>
+                <a href="delete-account#en">Delete account</a>
+            </nav>
+
+            <div class="footer">
+                <p>&copy; 2026 BeCaptain Studio. All rights reserved.</p>
+                <p style="margin-top: 0.5rem;">Contact: <a href="mailto:admin@becaptainstudio.com">admin@becaptainstudio.com</a></p>
+            </div>
+        </article>
+
+        <article id="es" lang="es" data-title="KanjiCraft - Kanji del N5 al N1">
+            <h1>KanjiCraft</h1>
+            <p class="tagline">Kanji en español, del N5 al N1.</p>
+
+            <div class="section">
+                <h2>Qué es</h2>
+                <p>KanjiCraft enseña los 2202 kanji del JLPT, del N5 al N1, con significado, pista para recordar y palabras de ejemplo en tu idioma.</p>
+                <ul>
+                    <li>Sesión del día: repasos en el momento justo y kanji nuevos a tu ritmo (repetición espaciada FSRS).</li>
+                    <li>Lecciones con orden de trazos animado, lecturas, audio, pista para recordar y palabras comunes.</li>
+                    <li>Escritura: calca el kanji y luego escríbelo de memoria, con corrección trazo a trazo hecha en tu dispositivo.</li>
+                    <li>Entrenamiento rápido y una lista de los kanji que más olvidas.</li>
+                    <li>Racha con congelaciones, logros y progreso por nivel.</li>
+                    <li>Funciona sin internet. La cuenta es opcional y sirve para guardar y sincronizar tu progreso.</li>
+                    <li>En portugués, inglés, español e indonesio.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Gratis y Pro <span class="badge">PRO</span></h2>
+                <p><strong>Gratis:</strong> todo el N5 (103 kanji), el tema “En el restaurante”, repasos siempre incluidos y, después del N5, una lección extra del N4 al día viendo un anuncio. La versión gratis tiene anuncios.</p>
+                <p><strong>Pro:</strong> los 2202 kanji del N5 al N1, los 8 temas del día a día, sin anuncios y estadísticas avanzadas (previsión y retención). Los precios se muestran en la app, en la moneda de tu tienda.</p>
+            </div>
+
+            <div class="section">
+                <h2>Sobre el contenido</h2>
+                <p>Los kanji, lecturas y palabras vienen de diccionarios abiertos (KANJIDIC2 y JMdict), y el orden de trazos, de KanjiVG. Los significados, las pistas para recordar y las traducciones se escribieron con ayuda de herramientas de IA y pueden contener errores. ¿Encontraste uno? Cuéntanos a través del soporte.</p>
+            </div>
+
+            <nav class="links">
+                <a href="support#es">Soporte</a>
+                <a href="privacy#es">Política de privacidad</a>
+                <a href="terms#es">Términos de uso</a>
+                <a href="delete-account#es">Eliminar cuenta</a>
+            </nav>
+
+            <div class="footer">
+                <p>&copy; 2026 BeCaptain Studio. Todos los derechos reservados.</p>
+                <p style="margin-top: 0.5rem;">Contacto: <a href="mailto:admin@becaptainstudio.com">admin@becaptainstudio.com</a></p>
+            </div>
+        </article>
+
+        <article id="id" lang="id" data-title="KanjiCraft - Kanji dari N5 sampai N1">
+            <h1>KanjiCraft</h1>
+            <p class="tagline">Kanji dalam Bahasa Indonesia, dari N5 sampai N1.</p>
+
+            <div class="section">
+                <h2>Apa itu KanjiCraft</h2>
+                <p>KanjiCraft mengajarkan 2.202 kanji JLPT, dari N5 sampai N1, lengkap dengan arti, cara mengingat, dan contoh kata dalam bahasamu.</p>
+                <ul>
+                    <li>Sesi harian: ulasan di waktu yang tepat dan kanji baru sesuai kecepatanmu (pengulangan berjarak FSRS).</li>
+                    <li>Pelajaran dengan animasi urutan goresan, cara baca, audio, cara mengingat, dan kata-kata umum.</li>
+                    <li>Menulis: tebalkan kanji, lalu tulis dari ingatan, dengan koreksi per goresan yang dihitung di perangkatmu.</li>
+                    <li>Latihan cepat dan daftar kanji yang paling sering kamu lupakan.</li>
+                    <li>Runtunan dengan pembekuan, pencapaian, dan progres per level.</li>
+                    <li>Bisa dipakai tanpa internet. Akun bersifat opsional dan berguna untuk mencadangkan serta menyinkronkan progres.</li>
+                    <li>Tersedia dalam bahasa Portugis, Inggris, Spanyol, dan Indonesia.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Gratis dan Pro <span class="badge">PRO</span></h2>
+                <p><strong>Gratis:</strong> seluruh N5 (103 kanji), tema “Di restoran”, ulasan selalu tersedia, dan setelah N5, satu pelajaran tambahan N4 per hari dengan menonton iklan. Versi gratis menampilkan iklan.</p>
+                <p><strong>Pro:</strong> semua 2.202 kanji dari N5 sampai N1, 8 tema sehari-hari, tanpa iklan, dan statistik lanjutan (perkiraan dan retensi). Harga ditampilkan di aplikasi, dalam mata uang tokomu.</p>
+            </div>
+
+            <div class="section">
+                <h2>Tentang konten</h2>
+                <p>Kanji, cara baca, dan kata-kata berasal dari kamus terbuka (KANJIDIC2 dan JMdict), dan urutan goresan dari KanjiVG. Arti, cara mengingat, dan terjemahan ditulis dengan bantuan alat AI dan mungkin mengandung kesalahan. Menemukan kesalahan? Beri tahu kami lewat dukungan.</p>
+            </div>
+
+            <nav class="links">
+                <a href="support#id">Dukungan</a>
+                <a href="privacy#id">Kebijakan Privasi</a>
+                <a href="terms#id">Ketentuan Penggunaan</a>
+                <a href="delete-account#id">Hapus akun</a>
+            </nav>
+
+            <div class="footer">
+                <p>&copy; 2026 BeCaptain Studio. Hak cipta dilindungi.</p>
+                <p style="margin-top: 0.5rem;">Kontak: <a href="mailto:admin@becaptainstudio.com">admin@becaptainstudio.com</a></p>
+            </div>
+        </article>
     </div>
+
+    <script>
+        (function () {
+            var langs = ['pt', 'en', 'es', 'id'];
+            function pick() {
+                var h = location.hash.slice(1);
+                if (langs.indexOf(h) >= 0) return h;
+                var n = (navigator.language || 'en').slice(0, 2).toLowerCase();
+                return langs.indexOf(n) >= 0 ? n : 'en';
+            }
+            function show() {
+                var current = pick();
+                langs.forEach(function (l) {
+                    var article = document.getElementById(l);
+                    var link = document.querySelector('.langs a[href="#' + l + '"]');
+                    article.hidden = l !== current;
+                    if (l === current) {
+                        document.documentElement.lang = article.lang;
+                        document.title = article.getAttribute('data-title');
+                        link.setAttribute('aria-current', 'true');
+                    } else {
+                        link.removeAttribute('aria-current');
+                    }
+                });
+            }
+            window.addEventListener('hashchange', function () { show(); window.scrollTo(0, 0); });
+            show();
+        })();
+    </script>
 </body>
 </html>

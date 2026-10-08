@@ -3,132 +3,559 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Service - KanjiCraft</title>
+    <title>Terms of Use - KanjiCraft</title>
+    <meta name="description" content="Terms of Use for the KanjiCraft app by BeCaptain Studio.">
     <style>
-        :root { --primary: #4F46E5; --bg: #0D1642; --bg-card: #1A1F4E; --text: #F8FAFC; --text-secondary: #CBD5E1; --gold: #F59E0B; }
+        :root { --primary: #4F46E5; --link: #818CF8; --bg: #0D1642; --bg-card: #1A1F4E; --text: #F8FAFC; --text-secondary: #CBD5E1; --gold: #F59E0B; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; padding: 2rem 1rem; }
         .container { max-width: 720px; margin: 0 auto; }
-        .back { color: var(--primary); text-decoration: none; font-size: 0.9rem; display: inline-block; margin-bottom: 1.5rem; }
+        .back { color: var(--link); text-decoration: none; font-size: 0.9rem; display: inline-block; margin-bottom: 1rem; }
         .back:hover { text-decoration: underline; }
+        .langs { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2rem; }
+        .langs a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; padding: 0.35rem 0.85rem; border: 1px solid rgba(203, 213, 225, 0.25); border-radius: 999px; }
+        .langs a:hover { color: var(--text); border-color: var(--link); }
+        .langs a[aria-current="true"] { color: var(--text); border-color: var(--gold); background: rgba(245, 158, 11, 0.1); }
         h1 { font-size: 2rem; font-weight: 800; margin-bottom: 0.25rem; }
         .updated { color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 2rem; }
         .section { background: var(--bg-card); border-radius: 12px; padding: 1.5rem; margin-bottom: 1rem; }
         .section h2 { font-size: 1.1rem; color: var(--gold); margin-bottom: 0.75rem; }
         .section p, .section li { color: var(--text-secondary); line-height: 1.7; font-size: 0.92rem; }
-        .section ul { padding-left: 1.25rem; margin-top: 0.5rem; }
+        .section > * + * { margin-top: 0.75rem; }
+        .section ul, .section ol { padding-left: 1.25rem; }
         .section li { margin-bottom: 0.3rem; }
-        .highlight { background: rgba(245, 158, 11, 0.1); border-left: 3px solid var(--gold); padding: 1rem 1.25rem; border-radius: 0 8px 8px 0; margin: 1rem 0; }
+        .section a { color: var(--link); overflow-wrap: anywhere; }
+        .highlight { background: rgba(245, 158, 11, 0.1); border-left: 3px solid var(--gold); padding: 1rem 1.25rem; border-radius: 0 8px 8px 0; }
         .highlight p { color: var(--text) !important; }
-        .footer { text-align: center; margin-top: 2rem; color: var(--text-secondary); font-size: 0.85rem; }
-        .footer a { color: var(--primary); text-decoration: none; }
+        .highlight p + p { margin-top: 0.5rem; }
+        .footer { text-align: center; margin: 2rem 0 3rem; color: var(--text-secondary); font-size: 0.85rem; }
+        .footer a { color: var(--link); text-decoration: none; }
+        .footer a:hover { text-decoration: underline; }
+        [hidden] { display: none !important; }
     </style>
 </head>
 <body>
     <div class="container">
-        <a href="index" class="back">&larr; Back to KanjiCraft</a>
-        <h1>Terms of Service</h1>
-        <p class="updated">Last updated: March 19, 2026</p>
+        <a href="index" class="back">&larr; KanjiCraft</a>
+        <nav class="langs" aria-label="Language">
+            <a href="#pt" hreflang="pt-BR" lang="pt-BR">Português</a>
+            <a href="#en" hreflang="en" lang="en">English</a>
+            <a href="#es" hreflang="es" lang="es">Español</a>
+            <a href="#id" hreflang="id" lang="id">Bahasa Indonesia</a>
+        </nav>
 
-        <div class="section">
-            <p>By downloading, installing, or using the KanjiCraft application ("App"), you agree to these Terms of Use ("Terms"). If you do not agree with these Terms, do not use the App.</p>
-        </div>
+        <article id="pt" lang="pt-BR" data-title="Termos de Uso - KanjiCraft">
+            <h1>Termos de Uso</h1>
+            <p class="updated">Última atualização: 8 de outubro de 2026</p>
 
-        <div class="section">
-            <h2>1. Service description</h2>
-            <p>KanjiCraft is an educational application for learning Japanese kanji. The service includes interactive lessons, spaced repetition (SRS) reviews, quizzes, handwriting practice with AI recognition, and a gamification system with XP, streaks, and achievements.</p>
-        </div>
-
-        <div class="section">
-            <h2>2. Account and access</h2>
-            <p>2.1 You may use the App as a guest (no account) or create an account using email, Google, or Apple.</p>
-            <p>2.2 You are responsible for maintaining the security of your login credentials.</p>
-            <p>2.3 You must be at least 13 years old to use the App. Users under 18 must have authorization from a legal guardian.</p>
-        </div>
-
-        <div class="section">
-            <h2>3. Plans and subscriptions</h2>
-            <p>3.1 KanjiCraft offers a free version (JLPT N5, ~100 kanji) and a Pro subscription that unlocks all content (N4-N1, 2,000+ kanji).</p>
-            <p>3.2 Pro subscriptions are processed by the Apple App Store or Google Play Store and managed by RevenueCat.</p>
-            <p>3.3 Subscriptions renew automatically unless canceled at least 24 hours before the end of the current period.</p>
-            <p>3.4 You can manage or cancel your subscription at any time through App Store or Play Store settings.</p>
-        </div>
-
-        <div class="section">
-            <h2>4. Content and intellectual property</h2>
-            <p>4.1 All content in the App is the property of KanjiCraft or its licensors.</p>
-            <p>4.2 You are granted a personal, non-exclusive, non-transferable, revocable license to use the App for educational purposes.</p>
-            <p>4.3 You may not copy, modify, distribute, sell, or reverse-engineer any part of the App.</p>
-        </div>
-
-        <div class="section">
-            <h2>5. AI-Assisted Content and accuracy</h2>
-            <div class="highlight">
-                <p>Some educational content in KanjiCraft &mdash; including kanji meanings, mnemonics, example vocabulary, and stroke data &mdash; may have been generated or curated with the assistance of artificial intelligence tools.</p>
-                <p style="margin-top: 0.5rem;">While we strive for accuracy, errors may exist. KanjiCraft is a supplementary study tool and does not replace official study materials, qualified teachers, or academic references for JLPT preparation.</p>
-                <p style="margin-top: 0.5rem;">If you find any errors, please contact us: <a href="mailto:admin@becaptainstudio.com" style="color: var(--gold);">admin@becaptainstudio.com</a></p>
+            <div class="section">
+                <p>Estes Termos de Uso (“Termos”) valem para o app KanjiCraft, feito pelo BeCaptain Studio (“nós”). Ao usar o app, você concorda com eles. Se não concordar, não use o KanjiCraft.</p>
+                <p>A forma como tratamos seus dados está explicada na nossa <a href="privacy#pt">Política de Privacidade</a>.</p>
             </div>
-        </div>
 
-        <div class="section">
-            <h2>6. Advertising</h2>
-            <p>6.1 The free version displays ads provided by Google AdMob.</p>
-            <p>6.2 Pro subscribers do not see ads.</p>
-            <p>6.3 On iOS, we request consent via App Tracking Transparency before any ad tracking.</p>
-        </div>
+            <div class="section">
+                <h2>1. O que é o KanjiCraft</h2>
+                <p>O KanjiCraft é um auxiliar de estudo para aprender kanji japonês, com lições, revisões com repetição espaçada, prática de escrita e acompanhamento do progresso. Ele não garante resultados, como a aprovação no JLPT, e não substitui professores nem materiais oficiais.</p>
+            </div>
 
-        <div class="section">
-            <h2>7. Acceptable use</h2>
-            <p>When using the App, you agree NOT to:</p>
-            <ul>
-                <li>Use the service for illegal purposes</li>
-                <li>Attempt to access other users' accounts</li>
-                <li>Interfere with the App's operation or servers</li>
-                <li>Use bots, scrapers, or automated tools to extract content</li>
-                <li>Circumvent content restrictions of the free version</li>
-            </ul>
-        </div>
+            <div class="section">
+                <h2>2. Conta</h2>
+                <ul>
+                    <li>Você pode usar o app sem conta. Nesse caso, seu progresso fica salvo só no seu aparelho.</li>
+                    <li>Você pode criar uma conta opcional, com e-mail e senha, Google ou Apple (no iPhone e no iPad), para guardar e sincronizar seu progresso.</li>
+                    <li>Mantenha seus dados de acesso em segurança. Você é responsável pelo que acontece na sua conta.</li>
+                    <li>O KanjiCraft não é direcionado a menores de 13 anos (ou de 16 anos no Espaço Econômico Europeu, onde essa idade se aplica). Se você for menor de idade, use o app com a permissão dos seus pais ou responsável.</li>
+                </ul>
+            </div>
 
-        <div class="section">
-            <h2>8. Service availability</h2>
-            <p>8.1 The App works offline for core features. Sync and authentication require internet.</p>
-            <p>8.2 We reserve the right to modify, suspend, or discontinue any part of the service with reasonable notice.</p>
-            <p>8.3 We do not guarantee that the App will be error-free or uninterrupted.</p>
-        </div>
+            <div class="section">
+                <h2>3. Grátis e Pro</h2>
+                <p>A versão gratuita inclui:</p>
+                <ul>
+                    <li>todos os kanji do JLPT N5;</li>
+                    <li>o tema de comida “No restaurante”;</li>
+                    <li>revisões de tudo o que você já aprendeu — sempre grátis, mesmo se o seu Pro acabar.</li>
+                </ul>
+                <p>O KanjiCraft Pro remove os anúncios e libera o restante do conteúdo e dos recursos mostrados na tela do Pro, como os níveis N4 a N1 e os outros temas do dia a dia.</p>
+            </div>
 
-        <div class="section">
-            <h2>9. Limitation of liability</h2>
-            <p>9.1 KanjiCraft is provided "as is" and "as available".</p>
-            <p>9.2 We do not guarantee that using the App will result in Japanese proficiency or specific JLPT results.</p>
-            <p>9.3 To the maximum extent permitted by law, we shall not be liable for indirect, incidental, special, or consequential damages.</p>
-        </div>
+            <div class="section">
+                <h2>4. Assinaturas e pagamentos</h2>
+                <ul>
+                    <li>O Pro é oferecido como assinatura com renovação automática (por exemplo, mensal ou anual) ou como compra vitalícia, com pagamento único. Planos e preços aparecem no app antes da compra, na moeda da sua loja.</li>
+                    <li>A cobrança é feita na sua conta da App Store ou do Google Play. A Apple e o Google processam todos os pagamentos.</li>
+                    <li>A assinatura renova automaticamente, a menos que você cancele pelo menos 24 horas antes do fim do período atual.</li>
+                    <li>Se houver teste grátis, ele vira assinatura paga ao terminar, a menos que você cancele pelo menos 24 horas antes do fim do teste.</li>
+                    <li>A compra vitalícia é um pagamento único e nunca renova.</li>
+                    <li>Você gerencia ou cancela a assinatura nas configurações de assinaturas da App Store ou do Google Play. Apagar o app ou excluir a conta não cancela a assinatura.</li>
+                    <li>Reembolsos são tratados pela Apple ou pelo Google, conforme as políticas de cada loja.</li>
+                </ul>
+            </div>
 
-        <div class="section">
-            <h2>10. Account deletion</h2>
-            <p>10.1 You can delete your account at any time in the App settings.</p>
-            <p>10.2 Deletion removes your data from our servers within 30 days.</p>
-            <p>10.3 Locally stored data is removed when you uninstall the App.</p>
-        </div>
+            <div class="section">
+                <h2>5. Anúncios</h2>
+                <p>A versão gratuita pode exibir anúncios do Google AdMob. Quem é Pro não vê anúncios. Anúncios premiados são opcionais: você escolhe assistir a um para liberar uma lição extra ou recuperar uma sequência. A <a href="privacy#pt">Política de Privacidade</a> explica como funciona o consentimento para anúncios.</p>
+            </div>
 
-        <div class="section">
-            <h2>11. Changes to terms</h2>
-            <p>We may update these Terms from time to time. Continued use after changes constitutes acceptance.</p>
-        </div>
+            <div class="section">
+                <h2>6. Conteúdo, precisão e erros</h2>
+                <div class="highlight">
+                    <p>Significados, mnemônicos e traduções de palavras de exemplo foram escritos com ajuda de IA, a partir das fontes de dicionário listadas abaixo, e depois revisados. Mesmo assim, podem conter erros. Se encontrar algum, avise em <a href="mailto:admin@becaptainstudio.com">admin@becaptainstudio.com</a>.</p>
+                </div>
+            </div>
 
-        <div class="section">
-            <h2>12. Governing law</h2>
-            <p>These Terms are governed by the laws of Brazil. For users in the EU, mandatory consumer protection laws of your country of residence apply.</p>
-        </div>
+            <div class="section">
+                <h2>7. Propriedade intelectual e licenças</h2>
+                <p>O app — código, design, ilustrações, sons e textos originais — pertence ao BeCaptain Studio ou aos seus licenciadores, exceto o conteúdo aberto listado abaixo. Damos a você uma licença pessoal, não exclusiva e intransferível para usar o app nos seus estudos.</p>
+                <p>Parte do conteúdo vem de fontes abertas e mantém suas próprias licenças:</p>
+                <ul>
+                    <li>KANJIDIC2, JMdict e KRADFILE — © Electronic Dictionary Research and Development Group (EDRDG), CC BY-SA 4.0</li>
+                    <li>Dados de traços do KanjiVG — © Ulrich Apel, CC BY-SA 3.0</li>
+                    <li>Fontes Klee One, Noto Sans JP e Inter — SIL Open Font License 1.1</li>
+                </ul>
+                <p>Nada nestes Termos limita os direitos que essas licenças dão a você. Os detalhes estão em Perfil → Créditos e licenças.</p>
+            </div>
 
-        <div class="section">
-            <h2>13. Contact</h2>
-            <p>Email: <a href="mailto:admin@becaptainstudio.com" style="color: var(--primary);">admin@becaptainstudio.com</a></p>
-        </div>
+            <div class="section">
+                <h2>8. Uso aceitável</h2>
+                <p>Não é permitido:</p>
+                <ul>
+                    <li>usar o app para fins ilegais;</li>
+                    <li>tentar acessar contas de outras pessoas ou nossos servidores sem permissão;</li>
+                    <li>interferir no funcionamento do app ou dos servidores;</li>
+                    <li>usar bots ou ferramentas automáticas para extrair conteúdo do app;</li>
+                    <li>tentar liberar recursos pagos sem pagar.</li>
+                </ul>
+            </div>
 
-        <div class="footer">
-            <p>&copy; 2026 BeCaptain Studio. All rights reserved.</p>
-            <p style="margin-top: 0.25rem;"><a href="privacy">Privacy Policy</a> &middot; <a href="index">Home</a></p>
-        </div>
+            <div class="section">
+                <h2>9. Disponibilidade</h2>
+                <p>A maior parte do estudo funciona offline. Login, sincronização, compras e anúncios precisam de internet. Podemos mudar, suspender ou encerrar partes do serviço, com aviso razoável sempre que possível. Não garantimos que o app estará sempre livre de erros ou interrupções.</p>
+            </div>
+
+            <div class="section">
+                <h2>10. Limitação de responsabilidade</h2>
+                <p>O KanjiCraft é oferecido “no estado em que se encontra”. Na medida permitida por lei, não respondemos por danos indiretos decorrentes do uso do app. Nada nestes Termos limita direitos que você tem pelas leis de defesa do consumidor.</p>
+            </div>
+
+            <div class="section">
+                <h2>11. Exclusão da conta</h2>
+                <p>Você pode excluir sua conta quando quiser, em Perfil → Excluir conta. Isso apaga de forma permanente sua conta e os dados sincronizados, como explica a <a href="privacy#pt">Política de Privacidade</a>. A exclusão não cancela uma assinatura — cancele na App Store ou no Google Play.</p>
+            </div>
+
+            <div class="section">
+                <h2>12. Mudanças nestes Termos</h2>
+                <p>Podemos atualizar estes Termos. Vamos mudar a data no topo e, em mudanças importantes, avisar você no app. Se você continuar usando o KanjiCraft depois de uma mudança, os novos Termos passam a valer.</p>
+            </div>
+
+            <div class="section">
+                <h2>13. Lei aplicável</h2>
+                <p>Estes Termos são regidos pelas leis do Brasil. Disputas podem ser levadas ao foro do seu domicílio, conforme o Código de Defesa do Consumidor. Se você mora em outro país, por exemplo na União Europeia, as leis obrigatórias de proteção ao consumidor do seu país também se aplicam.</p>
+            </div>
+
+            <div class="section">
+                <h2>14. Contato</h2>
+                <p>BeCaptain Studio<br>
+E-mail: <a href="mailto:admin@becaptainstudio.com">admin@becaptainstudio.com</a></p>
+            </div>
+
+            <div class="footer">
+                <p>&copy; 2026 BeCaptain Studio. Todos os direitos reservados.</p>
+                <p style="margin-top: 0.25rem;"><a href="privacy#pt">Privacidade</a> &middot; <a href="terms#pt">Termos</a> &middot; <a href="support#pt">Suporte</a> &middot; <a href="delete-account#pt">Excluir conta</a> &middot; <a href="index">Início</a></p>
+            </div>
+        </article>
+
+        <article id="en" lang="en" data-title="Terms of Use - KanjiCraft">
+            <h1>Terms of Use</h1>
+            <p class="updated">Last updated: October 8, 2026</p>
+
+            <div class="section">
+                <p>These Terms of Use (“Terms”) apply to the KanjiCraft app, made by BeCaptain Studio (“we”, “us”). By using the app, you agree to them. If you don’t agree, please don’t use KanjiCraft.</p>
+                <p>How we handle your data is explained in our <a href="privacy#en">Privacy Policy</a>.</p>
+            </div>
+
+            <div class="section">
+                <h2>1. What KanjiCraft is</h2>
+                <p>KanjiCraft is a study aid for learning Japanese kanji, with lessons, spaced-repetition reviews, handwriting practice and progress tracking. It doesn’t guarantee any result, such as passing the JLPT, and it doesn’t replace teachers or official materials.</p>
+            </div>
+
+            <div class="section">
+                <h2>2. Accounts</h2>
+                <ul>
+                    <li>You can use the app without an account. In that case, your progress is saved only on your device.</li>
+                    <li>You can create an optional account with email and password, Google, or Apple (on iPhone and iPad) to back up and sync your progress.</li>
+                    <li>Keep your login details safe. You are responsible for what happens on your account.</li>
+                    <li>KanjiCraft is not directed to children under 13 (or under 16 in the European Economic Area, where that age applies). If you are a minor, use the app with permission from a parent or guardian.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>3. Free and Pro</h2>
+                <p>The free version includes:</p>
+                <ul>
+                    <li>all JLPT N5 kanji;</li>
+                    <li>the “At the restaurant” food theme;</li>
+                    <li>reviews of everything you have already learned — always free, even if your Pro access ends.</li>
+                </ul>
+                <p>KanjiCraft Pro removes ads and unlocks the rest of the content and features shown on the Pro screen, such as levels N4 to N1 and the other everyday themes.</p>
+            </div>
+
+            <div class="section">
+                <h2>4. Subscriptions and payments</h2>
+                <ul>
+                    <li>Pro is offered as an auto-renewing subscription (for example monthly or yearly) or as a lifetime one-time purchase. Plans and prices are shown in the app before you buy, in your store’s currency.</li>
+                    <li>Payment is charged to your App Store or Google Play account. Apple and Google process all payments.</li>
+                    <li>Subscriptions renew automatically unless you cancel at least 24 hours before the end of the current period.</li>
+                    <li>If a free trial is offered, it becomes a paid subscription when it ends, unless you cancel at least 24 hours before the trial ends.</li>
+                    <li>Lifetime is a one-time purchase and never renews.</li>
+                    <li>You can manage or cancel your subscription in the App Store or Google Play subscription settings. Deleting the app or your account doesn’t cancel it.</li>
+                    <li>Refunds are handled by Apple or Google under each store’s policies.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>5. Ads</h2>
+                <p>The free version may show ads from Google AdMob. Pro users don’t see ads. Rewarded ads are optional: you choose to watch one to unlock an extra lesson or to restore a streak. The <a href="privacy#en">Privacy Policy</a> explains how ad consent works.</p>
+            </div>
+
+            <div class="section">
+                <h2>6. Content, accuracy and errors</h2>
+                <div class="highlight">
+                    <p>Meanings, mnemonics and example-word translations were written with the help of AI, based on the dictionary sources listed below, and then reviewed. Even so, they may contain errors. If you find one, please tell us at <a href="mailto:admin@becaptainstudio.com">admin@becaptainstudio.com</a>.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>7. Intellectual property and licenses</h2>
+                <p>The app — its code, design, illustrations, sounds and original texts — belongs to BeCaptain Studio or its licensors, except for the open content listed below. We give you a personal, non-exclusive, non-transferable license to use the app for your own study.</p>
+                <p>Some content comes from open sources and keeps its own licenses:</p>
+                <ul>
+                    <li>KANJIDIC2, JMdict and KRADFILE — © Electronic Dictionary Research and Development Group (EDRDG), CC BY-SA 4.0</li>
+                    <li>KanjiVG stroke data — © Ulrich Apel, CC BY-SA 3.0</li>
+                    <li>Klee One, Noto Sans JP and Inter fonts — SIL Open Font License 1.1</li>
+                </ul>
+                <p>Nothing in these Terms limits the rights those licenses give you. Details are in Profile → Credits and licenses.</p>
+            </div>
+
+            <div class="section">
+                <h2>8. Acceptable use</h2>
+                <p>Please don’t:</p>
+                <ul>
+                    <li>use the app for anything illegal;</li>
+                    <li>try to access other people’s accounts or our servers without permission;</li>
+                    <li>interfere with how the app or its servers work;</li>
+                    <li>use bots or automated tools to extract content from the app;</li>
+                    <li>try to unlock paid features without paying.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>9. Availability</h2>
+                <p>Most study features work offline. Signing in, syncing, purchases and ads need an internet connection. We may change, suspend or end parts of the service, with reasonable notice whenever possible. We can’t promise the app will always be free of errors or interruptions.</p>
+            </div>
+
+            <div class="section">
+                <h2>10. Limitation of liability</h2>
+                <p>KanjiCraft is provided “as is”. To the extent allowed by law, we are not liable for indirect damages arising from your use of the app. Nothing in these Terms limits rights you have under consumer protection laws.</p>
+            </div>
+
+            <div class="section">
+                <h2>11. Deleting your account</h2>
+                <p>You can delete your account at any time in Profile → Delete account. This permanently deletes your account and synced data, as explained in the <a href="privacy#en">Privacy Policy</a>. It doesn’t cancel a subscription — cancel it in the App Store or Google Play.</p>
+            </div>
+
+            <div class="section">
+                <h2>12. Changes to these Terms</h2>
+                <p>We may update these Terms. We’ll change the date at the top and, for significant changes, let you know in the app. If you keep using KanjiCraft after a change, the new Terms apply.</p>
+            </div>
+
+            <div class="section">
+                <h2>13. Governing law</h2>
+                <p>These Terms are governed by the laws of Brazil. Disputes may be brought in the courts where you live, as provided by the Brazilian Consumer Protection Code. If you live in another country, for example in the EU, the mandatory consumer protection laws of your country also apply.</p>
+            </div>
+
+            <div class="section">
+                <h2>14. Contact</h2>
+                <p>BeCaptain Studio<br>
+Email: <a href="mailto:admin@becaptainstudio.com">admin@becaptainstudio.com</a></p>
+            </div>
+
+            <div class="footer">
+                <p>&copy; 2026 BeCaptain Studio. All rights reserved.</p>
+                <p style="margin-top: 0.25rem;"><a href="privacy#en">Privacy</a> &middot; <a href="terms#en">Terms</a> &middot; <a href="support#en">Support</a> &middot; <a href="delete-account#en">Delete account</a> &middot; <a href="index">Home</a></p>
+            </div>
+        </article>
+
+        <article id="es" lang="es" data-title="Términos de uso - KanjiCraft">
+            <h1>Términos de uso</h1>
+            <p class="updated">Última actualización: 8 de octubre de 2026</p>
+
+            <div class="section">
+                <p>Estos Términos de uso (“Términos”) se aplican a la app KanjiCraft, creada por BeCaptain Studio (“nosotros”). Al usar la app, los aceptas. Si no estás de acuerdo, no uses KanjiCraft.</p>
+                <p>Cómo tratamos tus datos se explica en nuestra <a href="privacy#es">Política de privacidad</a>.</p>
+            </div>
+
+            <div class="section">
+                <h2>1. Qué es KanjiCraft</h2>
+                <p>KanjiCraft es una herramienta de apoyo para aprender kanji japonés, con lecciones, repasos con repetición espaciada, práctica de escritura y seguimiento del progreso. No garantiza resultados, como aprobar el JLPT, y no reemplaza a profesores ni materiales oficiales.</p>
+            </div>
+
+            <div class="section">
+                <h2>2. Cuenta</h2>
+                <ul>
+                    <li>Puedes usar la app sin cuenta. En ese caso, tu progreso se guarda solo en tu dispositivo.</li>
+                    <li>Puedes crear una cuenta opcional, con correo y contraseña, Google o Apple (en iPhone y iPad), para respaldar y sincronizar tu progreso.</li>
+                    <li>Mantén seguros tus datos de acceso. Eres responsable de lo que ocurra en tu cuenta.</li>
+                    <li>KanjiCraft no está dirigido a menores de 13 años (o de 16 en el Espacio Económico Europeo, donde se aplica esa edad). Si eres menor de edad, usa la app con permiso de tu madre, padre o tutor.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>3. Gratis y Pro</h2>
+                <p>La versión gratuita incluye:</p>
+                <ul>
+                    <li>todos los kanji del JLPT N5;</li>
+                    <li>el tema de comida “En el restaurante”;</li>
+                    <li>repasos de todo lo que ya aprendiste: siempre gratis, incluso si tu Pro termina.</li>
+                </ul>
+                <p>KanjiCraft Pro quita los anuncios y desbloquea el resto del contenido y las funciones que aparecen en la pantalla de Pro, como los niveles N4 a N1 y los demás temas cotidianos.</p>
+            </div>
+
+            <div class="section">
+                <h2>4. Suscripciones y pagos</h2>
+                <ul>
+                    <li>Pro se ofrece como suscripción con renovación automática (por ejemplo, mensual o anual) o como compra de por vida con un único pago. Los planes y precios se muestran en la app antes de comprar, en la moneda de tu tienda.</li>
+                    <li>El cobro se hace en tu cuenta de App Store o Google Play. Apple y Google procesan todos los pagos.</li>
+                    <li>La suscripción se renueva automáticamente, a menos que la canceles al menos 24 horas antes del final del período actual.</li>
+                    <li>Si se ofrece una prueba gratuita, se convierte en suscripción de pago al terminar, a menos que la canceles al menos 24 horas antes del final de la prueba.</li>
+                    <li>La compra de por vida es un pago único y nunca se renueva.</li>
+                    <li>Puedes administrar o cancelar la suscripción en la configuración de suscripciones de App Store o Google Play. Borrar la app o eliminar tu cuenta no la cancela.</li>
+                    <li>Los reembolsos los gestionan Apple o Google, según las políticas de cada tienda.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>5. Anuncios</h2>
+                <p>La versión gratuita puede mostrar anuncios de Google AdMob. Los usuarios Pro no ven anuncios. Los anuncios con recompensa son opcionales: tú decides ver uno para desbloquear una lección extra o recuperar una racha. La <a href="privacy#es">Política de privacidad</a> explica cómo funciona el consentimiento para anuncios.</p>
+            </div>
+
+            <div class="section">
+                <h2>6. Contenido, precisión y errores</h2>
+                <div class="highlight">
+                    <p>Los significados, mnemotecnias y traducciones de palabras de ejemplo se escribieron con ayuda de IA, a partir de las fuentes de diccionario indicadas abajo, y luego se revisaron. Aun así, pueden contener errores. Si encuentras alguno, avísanos en <a href="mailto:admin@becaptainstudio.com">admin@becaptainstudio.com</a>.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>7. Propiedad intelectual y licencias</h2>
+                <p>La app —su código, diseño, ilustraciones, sonidos y textos originales— pertenece a BeCaptain Studio o a sus licenciantes, salvo el contenido abierto indicado abajo. Te damos una licencia personal, no exclusiva e intransferible para usar la app en tus estudios.</p>
+                <p>Parte del contenido proviene de fuentes abiertas y conserva sus propias licencias:</p>
+                <ul>
+                    <li>KANJIDIC2, JMdict y KRADFILE — © Electronic Dictionary Research and Development Group (EDRDG), CC BY-SA 4.0</li>
+                    <li>Datos de trazos de KanjiVG — © Ulrich Apel, CC BY-SA 3.0</li>
+                    <li>Fuentes Klee One, Noto Sans JP e Inter — SIL Open Font License 1.1</li>
+                </ul>
+                <p>Nada en estos Términos limita los derechos que te dan esas licencias. Los detalles están en Perfil → Créditos y licencias.</p>
+            </div>
+
+            <div class="section">
+                <h2>8. Uso aceptable</h2>
+                <p>No está permitido:</p>
+                <ul>
+                    <li>usar la app con fines ilegales;</li>
+                    <li>intentar acceder a cuentas de otras personas o a nuestros servidores sin permiso;</li>
+                    <li>interferir en el funcionamiento de la app o de los servidores;</li>
+                    <li>usar bots o herramientas automáticas para extraer contenido de la app;</li>
+                    <li>intentar desbloquear funciones de pago sin pagar.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>9. Disponibilidad</h2>
+                <p>La mayor parte del estudio funciona sin conexión. El inicio de sesión, la sincronización, las compras y los anuncios necesitan internet. Podemos cambiar, suspender o finalizar partes del servicio, con aviso razonable siempre que sea posible. No garantizamos que la app esté siempre libre de errores o interrupciones.</p>
+            </div>
+
+            <div class="section">
+                <h2>10. Limitación de responsabilidad</h2>
+                <p>KanjiCraft se ofrece “tal cual”. En la medida en que la ley lo permita, no respondemos por daños indirectos derivados del uso de la app. Nada en estos Términos limita los derechos que te otorgan las leyes de protección al consumidor.</p>
+            </div>
+
+            <div class="section">
+                <h2>11. Eliminación de la cuenta</h2>
+                <p>Puedes eliminar tu cuenta cuando quieras en Perfil → Eliminar cuenta. Esto borra de forma permanente tu cuenta y los datos sincronizados, como se explica en la <a href="privacy#es">Política de privacidad</a>. No cancela una suscripción: cancélala en App Store o Google Play.</p>
+            </div>
+
+            <div class="section">
+                <h2>12. Cambios en estos Términos</h2>
+                <p>Podemos actualizar estos Términos. Cambiaremos la fecha al inicio y, si los cambios son importantes, te avisaremos en la app. Si sigues usando KanjiCraft después de un cambio, se aplican los nuevos Términos.</p>
+            </div>
+
+            <div class="section">
+                <h2>13. Ley aplicable</h2>
+                <p>Estos Términos se rigen por las leyes de Brasil. Las disputas pueden presentarse ante los tribunales de tu domicilio, según el Código de Defensa del Consumidor de Brasil. Si vives en otro país, por ejemplo en la Unión Europea, también se aplican las leyes obligatorias de protección al consumidor de tu país.</p>
+            </div>
+
+            <div class="section">
+                <h2>14. Contacto</h2>
+                <p>BeCaptain Studio<br>
+Correo: <a href="mailto:admin@becaptainstudio.com">admin@becaptainstudio.com</a></p>
+            </div>
+
+            <div class="footer">
+                <p>&copy; 2026 BeCaptain Studio. Todos los derechos reservados.</p>
+                <p style="margin-top: 0.25rem;"><a href="privacy#es">Privacidad</a> &middot; <a href="terms#es">Términos</a> &middot; <a href="support#es">Soporte</a> &middot; <a href="delete-account#es">Eliminar cuenta</a> &middot; <a href="index">Inicio</a></p>
+            </div>
+        </article>
+
+        <article id="id" lang="id" data-title="Ketentuan Penggunaan - KanjiCraft">
+            <h1>Ketentuan Penggunaan</h1>
+            <p class="updated">Terakhir diperbarui: 8 Oktober 2026</p>
+
+            <div class="section">
+                <p>Ketentuan Penggunaan ini (“Ketentuan”) berlaku untuk aplikasi KanjiCraft yang dibuat oleh BeCaptain Studio (“kami”). Dengan menggunakan aplikasi, Anda menyetujuinya. Jika tidak setuju, mohon jangan gunakan KanjiCraft.</p>
+                <p>Cara kami menangani data Anda dijelaskan dalam <a href="privacy#id">Kebijakan Privasi</a> kami.</p>
+            </div>
+
+            <div class="section">
+                <h2>1. Apa itu KanjiCraft</h2>
+                <p>KanjiCraft adalah alat bantu belajar kanji Jepang, dengan pelajaran, ulasan dengan pengulangan berjarak (spaced repetition), latihan menulis, dan pemantauan progres. KanjiCraft tidak menjamin hasil tertentu, seperti lulus JLPT, dan tidak menggantikan guru atau materi resmi.</p>
+            </div>
+
+            <div class="section">
+                <h2>2. Akun</h2>
+                <ul>
+                    <li>Anda bisa menggunakan aplikasi tanpa akun. Dalam hal ini, progres Anda hanya tersimpan di perangkat Anda.</li>
+                    <li>Anda bisa membuat akun opsional dengan email dan kata sandi, Google, atau Apple (di iPhone dan iPad) untuk mencadangkan dan menyinkronkan progres.</li>
+                    <li>Jaga keamanan data login Anda. Anda bertanggung jawab atas aktivitas di akun Anda.</li>
+                    <li>KanjiCraft tidak ditujukan untuk anak di bawah 13 tahun (atau di bawah 16 tahun di Kawasan Ekonomi Eropa, jika batas usia itu berlaku). Jika Anda belum dewasa, gunakan aplikasi dengan izin orang tua atau wali.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>3. Gratis dan Pro</h2>
+                <p>Versi gratis mencakup:</p>
+                <ul>
+                    <li>semua kanji JLPT N5;</li>
+                    <li>tema makanan “Di restoran”;</li>
+                    <li>ulasan untuk semua yang sudah Anda pelajari — selalu gratis, bahkan jika akses Pro Anda berakhir.</li>
+                </ul>
+                <p>KanjiCraft Pro menghilangkan iklan dan membuka sisa konten serta fitur yang ditampilkan di layar Pro, seperti level N4 sampai N1 dan tema sehari-hari lainnya.</p>
+            </div>
+
+            <div class="section">
+                <h2>4. Langganan dan pembayaran</h2>
+                <ul>
+                    <li>Pro tersedia sebagai langganan yang diperpanjang otomatis (misalnya bulanan atau tahunan) atau sebagai pembelian seumur hidup dengan sekali bayar. Paket dan harga ditampilkan di aplikasi sebelum pembelian, dalam mata uang toko Anda.</li>
+                    <li>Pembayaran ditagihkan ke akun App Store atau Google Play Anda. Apple dan Google memproses semua pembayaran.</li>
+                    <li>Langganan diperpanjang otomatis kecuali Anda membatalkannya paling lambat 24 jam sebelum periode berjalan berakhir.</li>
+                    <li>Jika tersedia uji coba gratis, uji coba itu akan menjadi langganan berbayar saat berakhir, kecuali Anda membatalkannya paling lambat 24 jam sebelum uji coba berakhir.</li>
+                    <li>Pembelian seumur hidup adalah pembayaran satu kali dan tidak pernah diperpanjang.</li>
+                    <li>Anda bisa mengelola atau membatalkan langganan di pengaturan langganan App Store atau Google Play. Menghapus aplikasi atau akun tidak membatalkan langganan.</li>
+                    <li>Pengembalian dana (refund) ditangani oleh Apple atau Google sesuai kebijakan masing-masing toko.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>5. Iklan</h2>
+                <p>Versi gratis dapat menampilkan iklan dari Google AdMob. Pengguna Pro tidak melihat iklan. Iklan berhadiah bersifat opsional: Anda sendiri yang memilih untuk menontonnya agar bisa membuka satu pelajaran tambahan atau memulihkan streak. <a href="privacy#id">Kebijakan Privasi</a> menjelaskan cara kerja persetujuan iklan.</p>
+            </div>
+
+            <div class="section">
+                <h2>6. Konten, akurasi, dan kesalahan</h2>
+                <div class="highlight">
+                    <p>Arti, mnemonik (jembatan keledai), dan terjemahan kata contoh ditulis dengan bantuan AI berdasarkan sumber kamus yang tercantum di bawah, lalu ditinjau. Meski begitu, konten bisa saja mengandung kesalahan. Jika menemukannya, beri tahu kami di <a href="mailto:admin@becaptainstudio.com">admin@becaptainstudio.com</a>.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>7. Kekayaan intelektual dan lisensi</h2>
+                <p>Aplikasi ini — kode, desain, ilustrasi, suara, dan teks orisinalnya — adalah milik BeCaptain Studio atau pemberi lisensinya, kecuali konten terbuka yang tercantum di bawah. Kami memberi Anda lisensi pribadi, non-eksklusif, dan tidak dapat dialihkan untuk menggunakan aplikasi ini dalam belajar.</p>
+                <p>Sebagian konten berasal dari sumber terbuka dan tetap memakai lisensinya sendiri:</p>
+                <ul>
+                    <li>KANJIDIC2, JMdict, dan KRADFILE — © Electronic Dictionary Research and Development Group (EDRDG), CC BY-SA 4.0</li>
+                    <li>Data goresan KanjiVG — © Ulrich Apel, CC BY-SA 3.0</li>
+                    <li>Font Klee One, Noto Sans JP, dan Inter — SIL Open Font License 1.1</li>
+                </ul>
+                <p>Tidak ada bagian dari Ketentuan ini yang membatasi hak yang diberikan lisensi tersebut kepada Anda. Detailnya ada di Profil → Kredit dan lisensi.</p>
+            </div>
+
+            <div class="section">
+                <h2>8. Penggunaan yang diperbolehkan</h2>
+                <p>Anda tidak boleh:</p>
+                <ul>
+                    <li>menggunakan aplikasi untuk tujuan ilegal;</li>
+                    <li>mencoba mengakses akun orang lain atau server kami tanpa izin;</li>
+                    <li>mengganggu cara kerja aplikasi atau servernya;</li>
+                    <li>menggunakan bot atau alat otomatis untuk mengambil konten dari aplikasi;</li>
+                    <li>mencoba membuka fitur berbayar tanpa membayar.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>9. Ketersediaan</h2>
+                <p>Sebagian besar fitur belajar bisa digunakan secara offline. Login, sinkronisasi, pembelian, dan iklan memerlukan internet. Kami dapat mengubah, menangguhkan, atau menghentikan sebagian layanan, dengan pemberitahuan yang wajar jika memungkinkan. Kami tidak menjamin aplikasi selalu bebas dari error atau gangguan.</p>
+            </div>
+
+            <div class="section">
+                <h2>10. Batasan tanggung jawab</h2>
+                <p>KanjiCraft disediakan “sebagaimana adanya”. Sejauh diizinkan oleh hukum, kami tidak bertanggung jawab atas kerugian tidak langsung akibat penggunaan aplikasi. Tidak ada bagian dari Ketentuan ini yang membatasi hak Anda berdasarkan undang-undang perlindungan konsumen.</p>
+            </div>
+
+            <div class="section">
+                <h2>11. Menghapus akun</h2>
+                <p>Anda bisa menghapus akun kapan saja melalui Profil → Hapus akun. Ini akan menghapus akun dan data yang tersinkron secara permanen, seperti dijelaskan dalam <a href="privacy#id">Kebijakan Privasi</a>. Penghapusan akun tidak membatalkan langganan — batalkan di App Store atau Google Play.</p>
+            </div>
+
+            <div class="section">
+                <h2>12. Perubahan Ketentuan</h2>
+                <p>Kami dapat memperbarui Ketentuan ini. Kami akan mengubah tanggal di bagian atas dan, untuk perubahan penting, memberi tahu Anda di aplikasi. Jika Anda tetap menggunakan KanjiCraft setelah perubahan, Ketentuan yang baru berlaku.</p>
+            </div>
+
+            <div class="section">
+                <h2>13. Hukum yang berlaku</h2>
+                <p>Ketentuan ini diatur oleh hukum Brasil. Sengketa dapat diajukan ke pengadilan di tempat tinggal Anda, sebagaimana diatur dalam Kode Perlindungan Konsumen Brasil. Jika Anda tinggal di negara lain, ketentuan wajib perlindungan konsumen di negara Anda juga tetap berlaku.</p>
+            </div>
+
+            <div class="section">
+                <h2>14. Kontak</h2>
+                <p>BeCaptain Studio<br>
+Email: <a href="mailto:admin@becaptainstudio.com">admin@becaptainstudio.com</a></p>
+            </div>
+
+            <div class="footer">
+                <p>&copy; 2026 BeCaptain Studio. Hak cipta dilindungi.</p>
+                <p style="margin-top: 0.25rem;"><a href="privacy#id">Privasi</a> &middot; <a href="terms#id">Ketentuan</a> &middot; <a href="support#id">Dukungan</a> &middot; <a href="delete-account#id">Hapus akun</a> &middot; <a href="index">Beranda</a></p>
+            </div>
+        </article>
+
     </div>
+    <script>
+        (function () {
+            var langs = ['pt', 'en', 'es', 'id'];
+            function pick() {
+                var h = location.hash.slice(1);
+                if (langs.indexOf(h) >= 0) return h;
+                var n = (navigator.language || 'en').slice(0, 2).toLowerCase();
+                return langs.indexOf(n) >= 0 ? n : 'en';
+            }
+            function show() {
+                var current = pick();
+                langs.forEach(function (l) {
+                    var article = document.getElementById(l);
+                    var link = document.querySelector('.langs a[href="#' + l + '"]');
+                    article.hidden = l !== current;
+                    if (l === current) {
+                        document.documentElement.lang = article.lang;
+                        document.title = article.getAttribute('data-title');
+                        link.setAttribute('aria-current', 'true');
+                    } else {
+                        link.removeAttribute('aria-current');
+                    }
+                });
+            }
+            window.addEventListener('hashchange', function () { show(); window.scrollTo(0, 0); });
+            show();
+        })();
+    </script>
 </body>
 </html>
